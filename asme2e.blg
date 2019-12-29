@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: asme2e.aux
+The style file: asmems4.bst
+Database file #1: asme2e.bib
+You're missing a field part---line 43 of file asme2e.bib
+ :  number = 
+ :           ,
+I'm skipping whatever remains of this entry
+Warning--string name "“numerical" is undefined
+--line 52 of file asme2e.bib
+I was expecting a `,' or a `}'---line 52 of file asme2e.bib
+ :  title = “numerical 
+ :                       Simulation and Proper”,
+I'm skipping whatever remains of this entry
+Warning--empty year in hoyas2008
+Warning--empty year in merzari2013
+Warning--empty title in merzari2013
+Warning--empty journal in merzari2013
+You've used 18 entries,
+            1984 wiz_defined-function locations,
+            585 strings with 5007 characters,
+and the built_in function-call counts, 3370 in all, are:
+= -- 303
+> -- 110
+< -- 4
++ -- 47
+- -- 29
+* -- 202
+:= -- 543
+add.period$ -- 63
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 178
+empty$ -- 365
+format.name$ -- 29
+if$ -- 766
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 12
+newline$ -- 101
+num.names$ -- 24
+pop$ -- 64
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 51
+stack$ -- 0
+substring$ -- 64
+swap$ -- 42
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 32
+width$ -- 20
+write$ -- 236
+(There were 2 error messages)
