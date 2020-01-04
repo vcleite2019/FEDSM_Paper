@@ -17,45 +17,46 @@ Warning--empty year in hoyas2008
 Warning--empty year in merzari2013
 Warning--empty title in merzari2013
 Warning--empty journal in merzari2013
-You've used 18 entries,
+Warning--empty year in signals
+You've used 5 entries,
             1984 wiz_defined-function locations,
-            585 strings with 5007 characters,
-and the built_in function-call counts, 3370 in all, are:
-= -- 303
-> -- 110
-< -- 4
-+ -- 47
-- -- 29
-* -- 202
-:= -- 543
-add.period$ -- 63
-call.type$ -- 18
-change.case$ -- 18
+            511 strings with 3987 characters,
+and the built_in function-call counts, 774 in all, are:
+= -- 58
+> -- 32
+< -- 1
++ -- 14
+- -- 9
+* -- 39
+:= -- 131
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 178
-empty$ -- 365
-format.name$ -- 29
-if$ -- 766
+cite$ -- 10
+duplicate$ -- 39
+empty$ -- 88
+format.name$ -- 9
+if$ -- 170
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 12
-newline$ -- 101
-num.names$ -- 24
-pop$ -- 64
+int.to.str$ -- 5
+missing$ -- 4
+newline$ -- 28
+num.names$ -- 5
+pop$ -- 25
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 51
+skip$ -- 7
 stack$ -- 0
-substring$ -- 64
-swap$ -- 42
-text.length$ -- 4
+substring$ -- 0
+swap$ -- 6
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 32
-width$ -- 20
-write$ -- 236
+warning$ -- 5
+while$ -- 5
+width$ -- 6
+write$ -- 53
 (There were 2 error messages)

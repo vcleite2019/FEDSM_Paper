@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  28 DEC 2019 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  4 JAN 2020 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -253,14 +253,14 @@ Underfull \hbox (badness 10000) detected at line 84
 
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 109.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 110.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
  [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -271,102 +271,87 @@ Non-PDF special ignored!
 <turbchannel_a.png, id=12, 4215.75pt x 1673.25125pt>
 File: turbchannel_a.png Graphic file (type png)
 <use turbchannel_a.png>
-Package pdftex.def Info: turbchannel_a.png  used on input line 113.
-(pdftex.def)             Requested size: 216.80669pt x 86.0419pt.
+Package pdftex.def Info: turbchannel_a.png  used on input line 115.
+(pdftex.def)             Requested size: 241.84842pt x 95.09627pt.
 <axis.png, id=13, 1271.75125pt x 811.03pt>
 File: axis.png Graphic file (type png)
 <use axis.png>
-Package pdftex.def Info: axis.png  used on input line 114.
+Package pdftex.def Info: axis.png  used on input line 116.
 (pdftex.def)             Requested size: 42.67912pt x 25.30388pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 117.
 <turbchannel_b.png, id=14, 4215.75pt x 1698.345pt>
 File: turbchannel_b.png Graphic file (type png)
 <use turbchannel_b.png>
-Package pdftex.def Info: turbchannel_b.png  used on input line 120.
-(pdftex.def)             Requested size: 216.80669pt x 87.33228pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 124.
+Package pdftex.def Info: turbchannel_b.png  used on input line 123.
+(pdftex.def)             Requested size: 241.84842pt x 96.58574pt.
 <viscosity.png, id=15, 4684.50125pt x 3513.125pt>
 File: viscosity.png Graphic file (type png)
 <use viscosity.png>
-Package pdftex.def Info: viscosity.png  used on input line 131.
+Package pdftex.def Info: viscosity.png  used on input line 130.
 (pdftex.def)             Requested size: 241.84842pt x 183.24408pt.
-<half_cross_section_mesh.png, id=16, 1566.85374pt x 1031.855pt>
+<Re_across_x.png, id=16, 4684.50125pt x 3513.125pt>
+File: Re_across_x.png Graphic file (type png)
+<use Re_across_x.png>
+Package pdftex.def Info: Re_across_x.png  used on input line 137.
+(pdftex.def)             Requested size: 241.84842pt x 183.24408pt.
+
+Underfull \hbox (badness 1163) in paragraph at lines 138--138
+\OT1/ptm/m/n/10 CASES VARY-ING ALONG THE STREAM-WISE DI-REC-
+ []
+
+<half_cross_section_mesh.png, id=17, 1566.85374pt x 1031.855pt>
 File: half_cross_section_mesh.png Graphic file (type png)
 <use half_cross_section_mesh.png>
-Package pdftex.def Info: half_cross_section_mesh.png  used on input line 148.
+Package pdftex.def Info: half_cross_section_mesh.png  used on input line 152.
 (pdftex.def)             Requested size: 256.0748pt x 169.30182pt.
-
-Underfull \hbox (badness 4181) in paragraph at lines 150--150
-\OT1/ptm/m/n/10 DIRECTION CROSS SEC-TION OF THE TUBU-LENCE
- []
-
 [2 <./turbchannel_a.png> <./axis.png> <./turbchannel_b.png> <./viscosity.png> <
-./half_cross_section_mesh.png>]
-Underfull \hbox (badness 1033) in paragraph at lines 186--187
-[]\OT1/ptm/m/n/10 Equations should be num-bered con-sec-u-tively be-gin-ning
+./Re_across_x.png>]
+<Re_t_CI.png, id=23, 4684.50125pt x 3513.125pt>
+File: Re_t_CI.png Graphic file (type png)
+<use Re_t_CI.png>
+Package pdftex.def Info: Re_t_CI.png  used on input line 211.
+(pdftex.def)             Requested size: 256.0748pt x 192.80283pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
+[]\OT1/phv/b/n/9 FIGURE 6\OT1/ptm/m/n/10 : |THE FRIC-TION REYNOLDS NUM-BER
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-
-Overfull \vbox (10.63121pt too high) has occurred while \output is active []
-
-
-[3]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 258.
-
- (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-(./asme2e.bbl
+[3 <./half_cross_section_mesh.png>] (./asme2e.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 7.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
 
-Underfull \hbox (badness 1292) in paragraph at lines 24--28
-[]\OT1/ptm/m/n/10 ASME, 2003.  \OT1/ptm/m/it/10 ASME Man-ual MS-4, An ASME Pa-
- []
-
-
-Underfull \hbox (badness 6961) in paragraph at lines 24--28
-\OT1/ptm/m/it/10 per\OT1/ptm/m/n/10 , lat-est ed.  The Amer-i-can So-ci-ety of 
-Me-
- []
-
-
-Underfull \hbox (badness 7203) in paragraph at lines 24--28
-\OT1/ptm/m/n/10 chan-i-cal En-gi-neers, New York.  See also URL
- []
-
-) [4] (./asme2e.aux) ) 
+(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)) [4 <./Re_t_CI.png>] (./asme2e.aux) ) 
 Here is how much of TeX's memory you used:
- 3056 strings out of 492616
- 47739 string characters out of 6129482
- 118261 words of memory out of 5000000
- 6914 multiletter control sequences out of 15000+600000
- 46362 words of font info for 89 fonts, out of 8000000 for 9000
+ 3036 strings out of 492616
+ 47495 string characters out of 6129482
+ 115214 words of memory out of 5000000
+ 6891 multiletter control sequences out of 15000+600000
+ 38305 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,39p,1032b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/
-8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts
-/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on asme2e.pdf (4 pages, 477897 bytes).
+ 41i,10n,39p,992b,394s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/font
+s/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/
+ucrr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on asme2e.pdf (4 pages, 715229 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

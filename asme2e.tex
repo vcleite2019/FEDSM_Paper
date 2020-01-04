@@ -103,37 +103,41 @@ The spacing between abstract and the text heading is two line spaces.  The prima
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{INTRODUCTION}
 
-The turbulence channel simulated is shown in Fig.~\ref{fig:geometries}. In this figure, regions I, II and III are defined by two planes crossing the channel. In this problem, the viscosity is a function of the streamwise distance, expressed here by the spatial variable \(x\). This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
+A schematic of the turbulence channels simulated are shown in Fig.~\ref{fig:geometries}. In this figure, regions I, II and III are defined by two planes crossing the channel. Within the first region it is implemented a cycling region, Fig.~\ref{fig:inlet}.
+In this problem, the viscosity \(\nu\) is a function of the streamwise distance, expressed here by the spatial variable \(x\). This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
 
-For the present work, three cases varying the length of region II are studied. Cases I, II and III have their region II begining at \(x=4\pi\) and the length of region II are respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity_cases} shows the plot of the viscosity as a function of \(x\) for each one of these cases. For all cases the inleat flow in region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}, while a periodic condition is considered for the boundaries of the spamwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
+In the present work, three cases varying the length of region II are studied. Cases I, II and III have their region II begining at \(x=4\pi\) and the length of region II are respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity_cases} shows the plot of the viscosity as a function of \(x\) for each one of these cases and Fig.~\ref{fig:reynolds_n} shows the plot of the Reynolds number for them.
+
+For all cases the inleat flow in region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}. Periodic condition is considered for the boundaries of the spamwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
 
 \begin{figure}[!htbp]
 	\centering
-	\begin{subfigure}{0.4\textwidth} % width of left subfigure
-		\includegraphics[width=\textwidth]{turbchannel_a.png}
-		\includegraphics[trim = 0mm 0mm 0mm 20mm, width = 15mm]{axis.png}
-		\caption{GEOMETRY OF THE TURBULENCE CHANNEL, THE CHANNEL IS DIVIDED INTO THREE DIFFERENT REGIONS.} % subcaption
+	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{turbchannel_a.png}
+	\includegraphics[trim = 0mm 0mm 0mm 20mm, width = 15mm]{axis.png}
+	\caption{GEOMETRY OF THE TURBULENCE CHANNEL, THE CHANNEL IS DIVIDED INTO THREE DIFFERENT REGIONS.} % subcaption
 	\label{fig:geometries}
-	\end{subfigure}
+	\end{figure}
 
-	\begin{subfigure}{0.4\textwidth} % width of right subfigure
-		\includegraphics[width=\textwidth]{turbchannel_b.png}
-		\label{fig:cyclic_inlet}
-		\caption{CYCLIC REGION IN THE INLET.} % subcaption
-	\end{subfigure}
-	\caption{SCHEMATICS OF THE SIMULATIONS EMPLOYED.} % caption for whole figure
-	\label{fig:models}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{turbchannel_b.png}
+	\caption{CYCLIC REGION IN THE INLET.} 
+	\label{fig:inlet}
 \end{figure}
 
 \begin{figure}[!htbp]
-\begin{center}
-\setlength{\unitlength}{0.012500in}%
-  \includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{viscosity.png}
-\end{center}
-  \caption{THE GRID EMPLOYED IN THE SIMULATION FROM HALF OF THE CHANNEL'S CROSS SECTION.}
-  \label{fig:viscosity_cases}
-\end{figure}
+	\centering
+	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{viscosity.png}
+	\caption{THE VISCOSITY FROM THE THREE CASES VARYING ALONG THE STREAMWISE DIRECTION.}
+	\label{fig:viscosity_cases}
+	\end{figure}
 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{Re_across_x.png}
+	\caption{THE REYNOLDS NUMBER FROM THE THREE CASES VARYING ALONG THE STREAMWISE DIRECTION.}
+	\label{fig:reynolds_n}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{METHODS}
@@ -147,7 +151,7 @@ The solution of this method is given by trigonometric series, in each element a 
 \setlength{\unitlength}{0.012500in}%
   \includegraphics[trim = 20mm 15mm 20mm 10mm, width = 90mm]{half_cross_section_mesh.png}
 \end{center}
-  \caption{THE GRID EMPLOYED IN THE STREAMWISE-DIRECTION CROSS SECTION OF THE TUBULENCE CHANNEL.}
+  \caption{THE GRID EMPLOYED IN THE SIMULATION FROM HALF OF THE CHANNEL'S CROSS SECTION.}
   \label{fig:cross_grid}
 \end{figure}
 
@@ -161,13 +165,110 @@ DNS simulations are able to simulate the finest turbulent length scales without 
 
 \section*{RESULTS}
 
-The results from the three cases considered in this work are presented in this section. First, the friction Reynolds number variation along the streamwise direction \(x\) of the channels are computed and compared with an expression for \(Re_{\tau}\) as a function of the Reynolds number existed in Ref.~\cite{pope}. This analysis shows the fact that the predicted shift in the friction Reynolds number due to a viscosity change imposed through region II is not immediate. Thereon, Reynolds stresses are collected and turbulent structures are investigated along the simulated channels.
+The results from the three cases considered in this work are presented in this section. First, the friction Reynolds number variation along the streamwise direction \(x\) of the channels are computed and compared with an expression for \(Re_{\tau}\) as a function of the Reynolds number existed in Ref.~\cite{pope}. This analysis shows the fact that the friction Reynolds number due to a viscosity change imposed through region II is not immediate. Thereon, Reynolds stresses are collected and turbulent structures are investigated along the simulated channels.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Analysing the friction Reynolds number}
 
-Here goes nice things.
+The friction Reynolds number has been calculated via numerical simulations for Cases I, II and III. To do so, several velocities profiles along \(x\) were obtained from the simulations' results and the viscous stress \(\frac{d\bar{U}}{dy}\) for these locations were calculated. Such values can then be applied in the set of definitions given from Eqn.~\ref{tau_w} to Eqn.~\ref{Re_t} following presented in order to calculate \(Re_{\tau}\).
+
+\begin{equation}
+{\tau}_w = \rho\nu\left(\frac{d\bar{U}}{dy}\right)_{y=0}
+\label{tau_w}
+\end{equation}
+
+Where \(\rho\) is the density and \({\tau}_w\)  is the shear stress at the wall.
+
+\begin{equation}
+u_{\tau} = \sqrt{\frac{{\tau}_w}{\rho}}
+\label{u_t}
+\end{equation}
+
+Where \(u_{\tau}\) is the friction velocity. And finally,
+
+\begin{equation}
+Re_{\tau} = \frac{u_{\tau}\delta}{\nu}
+\label{Re_t}
+\end{equation}
+
+Where \(\delta\) is the height of the simulated channels. For all Cases studied here this is a constant parameter \(\delta=2\).
+
+The friction Reynolds number calculated using Eqn.~\ref{Re_t}, i.e., the numeric simulations' results, are compared to the values obtained using an existed expression in the literature, Eqn.~\ref{anl_ret} from Ref.~\cite{pope}.
+
+\begin{equation}
+Re_{\tau} = 0.09Re^{0.88}
+\label{anl_ret}
+\end{equation}
+
+The Reynolds numbers used to supply Eqn.~\ref{anl_ret} are those varying through \(x\) from Cases I, II and III, as presented in Fig.~\ref{fig:re_t_x}. For simplicity, Reynolds numbers as functions of \(x\) are named in this study as \(Re_{I}(x)\), \(Re_{II}(x)\) and \(Re_{III}(x)\), while the friction Reynolds number functions are named \(Re_{{\tau}I}(x)\), \(Re_{{\tau}II}(x)\) and \(Re_{{\tau}III}(x)\) in reference to their respective cases.
+
+Fig.~\ref{fig:re_t_x} shows the plot of the friction Reynolds number thourgh \(x\) calculated via CFD analisys and by the analytical Eqn.~\ref{anl_ret} for Case I. In this figure, \(Re_{\tau}\) calculated via DNS is delayed in space when compared to the value obtained using the analytical solution provided by Eqn.~\ref{anl_ret}. This fact shows that the effect of the change in the viscosity doesn't cause an immediate effect on the turbulence of the flow. In this sense, the friction Reynolds number calculated through Eqn.~\ref{anl_ret} can be treated as signal over the space \(x\), and a convolution operation can be performed yielding a delayed signal that can be adjusted so it matches to the simulated results. Furthermore, the function \(F_{CI}(x)\) plotted in graph from Fig.~\ref{fig:re_t_x} is the result of this approach, a detailed description about the steps to derive the convolution functions for this study is provided in the following subsection.
+
+\begin{figure}[!htbp]
+\begin{center}
+\setlength{\unitlength}{0.012500in}%
+  \includegraphics[trim = 20mm 15mm 20mm 10mm, width = 90mm]{Re_t_CI.png}
+\end{center}
+  \caption{THE FRICTION REYNOLDS NUMBER THOURGH THE STREAMWISE DIRECTION FOR CASE I.}
+  \label{fig:re_t_x}
+\end{figure}
+
+\subsubsection*{The friction Reynolds number as a delayed signal.} 
+
+The purpose of deriving convolution functions that matches to the simulated data is to have means of quantitativly compute the delay between changing the viscosity and its effect on the turbulence for the studied cases.
+
+Eqn.~\ref{convolution} shows the convolution between the Reynolds number function \(Re(x)\), i.e., one of those presented in Fig.~\ref{fig:reynolds_n}, and a shifting function \(g(x-\chi)\), where \(\chi\) is a dummy variable.
+
+\begin{equation}
+F(t) =  \int_{-\infty}^{+\infty} Re_{\tau}(\chi)g(x-\chi)d\chi
+\label{convolution}
+\end{equation}
+
+Since we are dealing with a delayed signal, a decaying exponential has been used as the shifting function, i.e., \(g(x-\chi)=e^{-Rx}\), like proposed in Ref.~\cite{signals}, where \(R\) is the decaying constant for region II.
+
+The simulated channels in this study are divided in three regions, like shown in Fig.~\ref{fig:geometries}. Since there is no delay in region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\) for \(x{\leq}4\pi\). However, in region II a delay can be seen and a convolution operation needs to be performed for determining a delayed signal. The friction Reynolds number is a linear function given by Eqn.~\ref{linear_ret} in the second region.
+
+\begin{equation}
+Re_{\tau}(x)=ax+550
+\label{linear_ret}
+\end{equation}
+
+Where \(a\) is the linear coefficient that depends on which one of the three cases is being considered. Using Eqn.~\ref{linear_ret} in conjunction to the definition from Eqn.~\ref{convolution}, one may derive Eqn.~\ref{conv_region2}, which is the convolution function valid for region II for the cases considered.
+
+\begin{equation}
+F(x)= \frac{a}{R^2}(e^{-R(x-4{\pi})}-1)+\frac{a}{R}(x-4{\pi})+550
+\label{conv_region2}
+\end{equation}
+
+Lastly, another convolution is performed for region III. However, in this region the signal to be delayed has a constant value, i.e., \(Re_{\tau}(x)=20000\), differing from region II. Because of this, a shifting function with a different decaying constant needs to be considered, thus \(g(x-\chi)=e^{-Cx}\), where \(C\) is the decaying constant for region III. Finally, Eqn.~\ref{conv_region3} can be derived as the convolution function in region III.
+
+\begin{equation}
+F(x)= (20000-{\Lambda})(1-e^{-C(x-{\delta}_{R})})+{\Lambda}
+\label{conv_region3}
+\end{equation}
+
+Where \({\delta}_{R}\) is the \(x\) location of the interface between region II and III depending on which one of the three cases studied is being analysed. Meanwhile, \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{R}-4{\pi})}-1)+\frac{a}{R}({\delta}_{R}-4{\pi})+550\), and it represents the contribution from the predecessors regions.
+
+Tab.~\ref{table_conv} shows the parameters:
+
+\begin{table}[t]
+\caption{IMPORTANT PARAMETERS FROM THE CONSIDERED CASES.}
+\begin{center}
+\centering
+\label{table_conv}
+\begin{tabular}{c l l l l l}
+& & & & \\ % put some space after the caption
+\hline
+Case	&	Region II length	&	\({\delta}_R\)	&	\(R\)	&	\(C\) \\
+\hline
+I	&	        \(16{\pi}\)	&	\(20{\pi}\)	&	XXX	&	XXX \\
+II	&	        \(8{\pi}\)		&	\(12{\pi}\)	&	XXX	&	XXX \\
+III	&	        \(4{\pi}\)		&	\(8{\pi}\)	&	XXX	&	XXX \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \subsection*{Reynolds stresses and turbulent structures}
 
@@ -175,135 +276,8 @@ More good stuff.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{USE OF SI UNITS}
 
-An ASME paper should use SI units.  When preference is given to SI units, the U.S. customary units may be given in parentheses or omitted. When U.S. customary units are given preference, the SI equivalent {\em shall} be provided in parentheses or in a supplementary table. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{MATHEMATICS}
-
-Equations should be numbered consecutively beginning with (1) to the end of the paper, including any appendices.  The number should be enclosed in parentheses and set flush right in the column on the same line as the equation.  An extra line of space should be left above and below a displayed equation or formula. \LaTeX\ can automatically keep track of equation numbers in the paper and format almost any equation imaginable. An example is shown in Eqn.~(\ref{eq_ASME}). The number of a referenced equation in the text should be preceded by Eqn.\ unless the reference starts a sentence in which case Eqn.\ should be expanded to Equation.
-
-\begin{equation}
-f(t) = \int_{0_+}^t F(t) dt + \frac{d g(t)}{d t}
-\label{eq_ASME}
-\end{equation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{FIGURES AND TABLES}
-
-All figures should be positioned at the top of the page where possible.  All figures should be numbered consecutively and captioned; the caption uses all capital letters, and centered under the figure as shown in Fig.~\ref{figure_ASME}. All text within the figure should be no smaller than 7~pt. There should be a minimum two line spaces between figures and text. The number of a referenced figure or table in the text should be preceded by Fig.\ or Tab.\ respectively unless the reference starts a sentence in which case Fig.\ or Tab.\ should be expanded to Figure or Table.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\begin{center}
-\setlength{\unitlength}{0.012500in}%
-\begin{picture}(115,35)(255,545)
-\thicklines
-\put(255,545){\framebox(115,35){}}
-\put(275,560){Beautiful Figure}
-\end{picture}
-\end{center}
-\caption{THE FIGURE CAPTION USES CAPITAL LETTERS.}
-\label{figure_ASME} 
-\end{figure}
-%%%%%%%%%%%%%%%% end figure %%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% begin table   %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
-\caption{THE TABLE CAPTION USES CAPITAL LETTERS, TOO.}
-\begin{center}
-\label{table_ASME}
-\begin{tabular}{c l l}
-& & \\ % put some space after the caption
-\hline
-Example & Time & Cost \\
-\hline
-1 & 12.5 & \$1,000 \\
-2 & 24 & \$2,000 \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-%%%%%%%%%%%%%%%% end table %%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-All tables should be numbered consecutively and  captioned; the caption should use all capital letters, and centered above the table as shown in Table~\ref{table_ASME}. The body of the table should be no smaller than 7 pt.  There should be a minimum two line spaces between tables and text.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{FOOTNOTES\protect\footnotemark}
-\footnotetext{Examine the input file, asme2e.tex, to see how a footnote is given in a head.}
-
-Footnotes are referenced with superscript numerals and are numbered consecutively from 1 to the end of the paper\footnote{Avoid footnotes if at all possible.}. Footnotes should appear at the bottom of the column in which they are referenced.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{CITING REFERENCES}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The ASME reference format is defined in the authors kit provided by the ASME.  The format is:
-
-\begin{quotation}
-{\em Text Citation}. Within the text, references should be cited in  numerical order according to their order of appearance.  The numbered reference citation should be enclosed in brackets.
-\end{quotation}
-
-The references must appear in the paper in the order that they were cited.  In addition, multiple citations (3 or more in the same brackets) must appear as a `` [1-3]''.  A complete definition of the ASME reference format can be found in the  ASME manual \cite{asmemanual}.
-
-The bibliography style required by the ASME is unsorted with entries appearing in the order in which the citations appear. If that were the only specification, the standard {\sc Bib}\TeX\ unsrt bibliography style could be used. Unfortunately, the bibliography style required by the ASME has additional requirements (last name followed by first name, periodical volume in boldface, periodical number inside parentheses, etc.) that are not part of the unsrt style. Therefore, to get ASME bibliography formatting, you must use the \verb+asmems4.bst+ bibliography style file with {\sc Bib}\TeX. This file is not part of the standard BibTeX distribution so you'll need to place the file someplace where LaTeX can find it (one possibility is in the same location as the file being typeset).
-
-With \LaTeX/{\sc Bib}\TeX, \LaTeX\ uses the citation format set by the class file and writes the citation information into the .aux file associated with the \LaTeX\ source. {\sc Bib}\TeX\ reads the .aux file and matches the citations to the entries in the bibliographic data base file specified in the \LaTeX\ source file by the \verb+\bibliography+ command. {\sc Bib}\TeX\ then writes the bibliography in accordance with the rules in the bibliography .bst style file to a .bbl file which \LaTeX\ merges with the source text.  A good description of the use of {\sc Bib}\TeX\ can be found in \cite{latex, goosens} (see how 2 references are handled?).  The following is an example of how three or more references \cite{latex, asmemanual,  goosens} show up using the \verb+asmems4.bst+ bibliography style file in conjunction with the \verb+asme2e.cls+ class file. Here are some more \cite{art, blt, ibk, icn, ips, mts, mis, pro, pts, trt, upd} which can be used to describe almost any sort of reference.
-
-% Here's where you specify the bibliography style file.
-% The full file name for the bibliography style file 
-% used for an ASME paper is asmems4.bst.
-\bibliographystyle{asmems4}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{acknowledgment}
-Thanks go to D. E. Knuth and L. Lamport for developing the wonderful word processing software packages \TeX\ and \LaTeX. I also would like to thank Ken Sprott, Kirk van Katwyk, and Matt Campbell for fixing bugs in the ASME style file \verb+asme2e.cls+, and Geoff Shiflett for creating 
-ASME bibliography stype file \verb+asmems4.bst+.
-\end{acknowledgment}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The bibliography is stored in an external database file
-% in the BibTeX format (file_name.bib).  The bibliography is
-% created by the following command and it will appear in this
-% position in the document. You may, of course, create your
-% own bibliography by using thebibliography environment as in
-%
-% \begin{thebibliography}{12}
-% ...
-% \bibitem{itemreference} D. E. Knudsen.
-% {\em 1966 World Bnus Almanac.}
-% {Permafrost Press, Novosibirsk.}
-% ...
-% \end{thebibliography}
-
-% Here's where you specify the bibliography database file.
-% The full file name of the bibliography database for this
-% article is asme2e.bib. The name for your database is up
-% to you.
 \bibliography{asme2e}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix       %%% starting appendix
-\section*{Appendix A: Head of First Appendix}
-Avoid Appendices if possible.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Appendix B: Head of Second Appendix}
-\subsection*{Subsection head in appendix}
-The equation counter is not reset in an appendix and the numbers will
-follow one continual sequence from the beginning of the article to the very end as shown in the following example.
-\begin{equation}
-a = b + c.
-\end{equation}
+\appendix   
 
 \end{document}
