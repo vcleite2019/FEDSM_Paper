@@ -5,6 +5,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{lipsum}
+\usepackage{amsmath}
 \usepackage{multicol}
 
 \confshortname{FEDSM 2020}
@@ -214,6 +215,19 @@ F(x)= (20000-{\Lambda})(1-e^{-C(x-{\delta}_{III})})+{\Lambda}
 
 In this equation \({\delta}_{III}\) is the streamwise position that Region III starts, \(C\) is named contractioning parameter and it stands for the exponential decaying constant to be used in the shifting function \(g(x-\chi)\) when dealing with Region III and finally
  \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{III}-{\delta}_{II})}-1)+\frac{a}{R}({\delta}_{III}-{\delta}_{II})+550\), represents the contribution from Regions II to the delayed signal in Region III.
+
+In summary, Eqn.~\eqref{delayed} express the delayed function for \(Re_{\tau}\) over the different Regions of the turbulence channels in the present work. 
+
+\begin{equation} \label{delayed}
+F(x) = \\
+    \left\{\begin{array}{@{}lr@{}}
+        550  & \text{(Region I)}\\
+        \frac{a}{R^2}(e^{-R(x-{\delta}_{II})}-1)+\frac{a}{R}(x-{\delta}_{II})+550 & \text{(Region II)}\\
+        (20000-{\Lambda})(1-e^{-C(x-{\delta}_{III})})+{\Lambda} &  \text{(Region III)}
+\end{array}\right.
+\end{equation}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
