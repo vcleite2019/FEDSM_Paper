@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{hoyas2008}
+Hoyas, S., and Jimenez, J.
+\newblock ``Reynolds number effects on the reynolds stress budgets in turbulent
+  channels''.
+\newblock {\em Physics of {F}luid, \textbf{ 20}}.
+
+\bibitem{merzari2013}
+``Merzari, E., and Pointer, W.~D.''.
+
+\bibitem{Obabko2011}
+Obabko, A., Fischer, P., and Tautges, T., 2011.
+\newblock {CFD Validation in OECD/NEA T-Junction Benchmark}.
+\newblock Technical report~1, Argonne National Laboratory, Argonne, {IL}, June.
+\newblock See also URL \verb+http://www.osti.gov+.
+
+\bibitem{pope}
+Pope, S.~B., 2000.
+\newblock {\em Turbulent Flows}.
+\newblock Cambridge University Press, New York.
+
+\bibitem{signals}
+Oppenheim, A.~V.
+\newblock Signals and systems.
+\newblock On MIT OpenCourseWare.
+\newblock URL \verb+http://ocw.mit.edu+.
+
+\end{thebibliography}
