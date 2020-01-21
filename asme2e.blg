@@ -7,60 +7,52 @@ You're missing a field part---line 43 of file asme2e.bib
  :  number = 
  :           ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 56 of file asme2e.bib
+You're missing a field part---line 55 of file asme2e.bib
  :  number = 
  :           ,
 I'm skipping whatever remains of this entry
-Warning--string name "“numerical" is undefined
---line 64 of file asme2e.bib
-I was expecting a `,' or a `}'---line 64 of file asme2e.bib
- :  title = “numerical 
- :                       Simulation and Proper”,
-I'm skipping whatever remains of this entry
 Warning--empty year in hoyas2008
 Warning--empty year in merzari2013
-Warning--empty title in merzari2013
-Warning--empty journal in merzari2013
 Warning--empty year in signals
 You've used 5 entries,
             1984 wiz_defined-function locations,
-            511 strings with 3987 characters,
-and the built_in function-call counts, 774 in all, are:
-= -- 58
-> -- 32
+            514 strings with 4135 characters,
+and the built_in function-call counts, 814 in all, are:
+= -- 62
+> -- 35
 < -- 1
-+ -- 14
-- -- 9
-* -- 39
-:= -- 131
-add.period$ -- 15
++ -- 15
+- -- 10
+* -- 43
+:= -- 138
+add.period$ -- 17
 call.type$ -- 5
-change.case$ -- 3
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 39
-empty$ -- 88
-format.name$ -- 9
-if$ -- 170
+cite$ -- 8
+duplicate$ -- 40
+empty$ -- 92
+format.name$ -- 10
+if$ -- 180
 int.to.chr$ -- 0
 int.to.str$ -- 5
 missing$ -- 4
-newline$ -- 28
+newline$ -- 30
 num.names$ -- 5
-pop$ -- 25
+pop$ -- 23
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 7
 stack$ -- 0
 substring$ -- 0
-swap$ -- 6
+swap$ -- 7
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
+warning$ -- 3
 while$ -- 5
 width$ -- 6
-write$ -- 53
-(There were 3 error messages)
+write$ -- 57
+(There were 2 error messages)
