@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 JAN 2020 08:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 JAN 2020 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,13 +478,13 @@ Underfull \hbox (badness 10000) detected at line 47
 
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 80.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
  [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -495,110 +495,115 @@ Non-PDF special ignored!
 <geometry_turbchannel.pdf, id=12, 505.89pt x 200.75pt>
 File: geometry_turbchannel.pdf Graphic file (type pdf)
 <use geometry_turbchannel.pdf>
-Package pdftex.def Info: geometry_turbchannel.pdf  used on input line 91.
+Package pdftex.def Info: geometry_turbchannel.pdf  used on input line 98.
 (pdftex.def)             Requested size: 505.88875pt x 200.7495pt.
 <axis.pdf, id=13, 152.57pt x 97.36375pt>
 File: axis.pdf Graphic file (type pdf)
 <use axis.pdf>
-Package pdftex.def Info: axis.pdf  used on input line 93.
+Package pdftex.def Info: axis.pdf  used on input line 100.
 (pdftex.def)             Requested size: 152.56963pt x 97.3635pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 94.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 101.
 <cycling_region.pdf, id=14, 505.89pt x 203.76125pt>
 File: cycling_region.pdf Graphic file (type pdf)
 <use cycling_region.pdf>
-Package pdftex.def Info: cycling_region.pdf  used on input line 101.
+Package pdftex.def Info: cycling_region.pdf  used on input line 108.
 (pdftex.def)             Requested size: 505.88875pt x 203.76074pt.
 <viscosity.pdf, id=15, 562.1pt x 421.575pt>
 File: viscosity.pdf Graphic file (type pdf)
 <use viscosity.pdf>
-Package pdftex.def Info: viscosity.pdf  used on input line 109.
+Package pdftex.def Info: viscosity.pdf  used on input line 116.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 109--110
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 116--117
  [][] 
  []
 
 <reynolds.pdf, id=16, 562.1pt x 421.575pt>
 File: reynolds.pdf Graphic file (type pdf)
 <use reynolds.pdf>
-Package pdftex.def Info: reynolds.pdf  used on input line 117.
+Package pdftex.def Info: reynolds.pdf  used on input line 124.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 117--118
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 124--125
  [][] 
  []
 
-[2 <./geometry_turbchannel.pdf> <./axis.pdf> <./cycling_region.pdf> <./viscosit
-y.pdf> <./reynolds.pdf>]
-<mesh.png, id=1213, 1566.85374pt x 1031.855pt>
+<mesh.png, id=17, 1566.85374pt x 1031.855pt>
 File: mesh.png Graphic file (type png)
 <use mesh.png>
-Package pdftex.def Info: mesh.png  used on input line 132.
+Package pdftex.def Info: mesh.png  used on input line 139.
 (pdftex.def)             Requested size: 1566.84993pt x 1031.85248pt.
+[2 <./geometry_turbchannel.pdf> <./axis.pdf> <./cycling_region.pdf> <./viscosit
+y.pdf>]
 
-Underfull \hbox (badness 1478) in paragraph at lines 140--140
-[]\OT1/phv/b/n/10 METHODS - CON-VO-LU-TION OP-ER-A-TOR FOR THE
- []
-
-
-LaTeX Warning: Reference `anl_ret' on page 3 undefined on input line 142.
-
-
-LaTeX Warning: Reference `fig:geometries' on page 3 undefined on input line 183
+LaTeX Warning: Reference `fig:geometries' on page 3 undefined on input line 189
 .
 
-[3 <./mesh.png>]
+[3 <./reynolds.pdf> <./mesh.png>]
 
-LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 206.
-
-
-LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 206.
+LaTeX Warning: Reference `region3_delayed' on page 4 undefined on input line 20
+9.
 
 
-LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 206.
+LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 218.
+
+
+LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 218.
+
+
+LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 218.
 
 <convolution_CI.pdf, id=1223, 562.1pt x 421.575pt>
 File: convolution_CI.pdf Graphic file (type pdf)
 <use convolution_CI.pdf>
-Package pdftex.def Info: convolution_CI.pdf  used on input line 221.
+Package pdftex.def Info: convolution_CI.pdf  used on input line 233.
 (pdftex.def)             Requested size: 241.84842pt x 189.06001pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--223
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
 []\OT1/phv/b/n/9 FIGURE 6\OT1/ptm/m/n/10 : |THE FRIC-TION REYNOLDS NUM-BER
  []
 
 
 LaTeX Warning: Reference `fig:ww_profile_CI' on page 4 undefined on input line 
-253.
+265.
 
-<streaks.pdf, id=1224, 3303.34125pt x 1179.40625pt>
+[4 <./convolution_CI.pdf>]
+<streaks.pdf, id=1244, 3303.34125pt x 1179.40625pt>
 File: streaks.pdf Graphic file (type pdf)
 <use streaks.pdf>
-Package pdftex.def Info: streaks.pdf  used on input line 258.
+Package pdftex.def Info: streaks.pdf  used on input line 270.
 (pdftex.def)             Requested size: 542.025pt x 193.51385pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./asme2e.bbl [4 <./convolution_CI.pdf>]
+(./asme2e.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 7.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 19.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)) [5 <./streaks.pdf>] (./asme2e.aux)
+))
+[5
+
+] [6
+
+ <./streaks.pdf>] (./asme2e.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 12874 strings out of 492616
- 243141 string characters out of 6129482
- 436953 words of memory out of 5000000
- 16697 multiletter control sequences out of 15000+600000
+ 12875 strings out of 492616
+ 243167 string characters out of 6129482
+ 435953 words of memory out of 5000000
+ 16698 multiletter control sequences out of 15000+600000
  568110 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,63p,996b,394s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -615,10 +620,10 @@ s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw
 8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
 texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on asme2e.pdf (5 pages, 3507046 bytes).
+Output written on asme2e.pdf (6 pages, 3507862 bytes).
 PDF statistics:
- 1312 PDF objects out of 1440 (max. 8388607)
- 698 compressed objects within 7 object streams
+ 1315 PDF objects out of 1440 (max. 8388607)
+ 700 compressed objects within 7 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
