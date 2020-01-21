@@ -7,9 +7,13 @@ You're missing a field part---line 43 of file asme2e.bib
  :  number = 
  :           ,
 I'm skipping whatever remains of this entry
+You're missing a field part---line 56 of file asme2e.bib
+ :  number = 
+ :           ,
+I'm skipping whatever remains of this entry
 Warning--string name "“numerical" is undefined
---line 52 of file asme2e.bib
-I was expecting a `,' or a `}'---line 52 of file asme2e.bib
+--line 64 of file asme2e.bib
+I was expecting a `,' or a `}'---line 64 of file asme2e.bib
  :  title = “numerical 
  :                       Simulation and Proper”,
 I'm skipping whatever remains of this entry
@@ -59,4 +63,4 @@ warning$ -- 5
 while$ -- 5
 width$ -- 6
 write$ -- 53
-(There were 2 error messages)
+(There were 3 error messages)

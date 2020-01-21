@@ -1,61 +1,25 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%% asme2e.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Template for producing ASME-format articles using LaTeX            %
-% Written by   Harry H. Cheng                                        %
-%              Integration Engineering Laboratory                    %
-%              Department of Mechanical and Aeronautical Engineering %
-%              University of California                              %
-%              Davis, CA 95616                                       %
-%              Tel: (530) 752-5020 (office)                          %
-%                   (530) 752-1028 (lab)                             %
-%              Fax: (530) 752-4158                                   %
-%              Email: hhcheng@ucdavis.edu                            %
-%              WWW:   http://iel.ucdavis.edu/people/cheng.html       %
-%              May 7, 1994                                           %
-% Modified: February 16, 2001 by Harry H. Cheng                      %
-% Modified: January  01, 2003 by Geoffrey R. Shiflett                %
-% Use at your own risk, send complaints to /dev/null                 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%% use twocolumn and 10pt options with the asme2e format
 \documentclass[twocolumn,10pt]{asme2e}
 \special{papersize=8.5in,11in}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{lipsum}
+\usepackage{multicol}
 
-%% The class has several options
-%  onecolumn/twocolumn - format for one or two columns per page
-%  10pt/11pt/12pt - use 10, 11, or 12 point font
-%  oneside/twoside - format for oneside/twosided printing
-%  final/draft - format for final/draft copy
-%  cleanfoot - take out copyright info in footer leave page number
-%  cleanhead - take out the conference banner on the title page
-%  titlepage/notitlepage - put in titlepage or leave out titlepage
-%  
-%% The default is oneside, onecolumn, 10pt, final
-
-%%% Replace here with information related to your conference
 \confshortname{FEDSM 2020}
-\conffullname{the ASME 2020 Fluids Engineering Division’s Summer Meeting}
+\conffullname{the ASME 2020 Fluids Engineering Division Summer Meeting}
 
-%%%%% for date in a single month, use
-%\confdate{24-28}
-%\confmonth{September}
-%%%%% for date across two months, use
 \confdate{July 12-16}
 \confyear{2020}
-\confcity{Orlando}
+\confcity{Orlando, Florida}
 \confcountry{USA}
 
-%%% Replace DETC2009/MESA-12345 with the number supplied to you 
-%%% by ASME for your paper.
 \papernum{FEDSM2020-12388}
 
 %%% You need to remove 'DRAFT: ' in the title for the final submitted version.
 \title{DRAFT: The Effect of Variying Viscosity in Turbulent Channel Flow}
-%%% for the discussion section only
-%\usepackage{helvet}
-%\title{\fontfamily{phv}\selectfont{\Huge{DRAFT: AN ARTICLE CREATED USING \LaTeX2\raisebox{-.3ex}{$\epsilon$}\ IN ASME FORMAT}}}
+
 
 %%% first author
 \author{Victor Coppo Leite
@@ -69,7 +33,6 @@
 
 %%% second author
 %%% remove the following entry for single author papers
-%%% add more entries for additional authors
 \author{Elia Merzari
     \affiliation{
 	Ken and Mary Alice Lindquist\\Department of Nuclear Engineering\\
@@ -95,6 +58,14 @@ In this study, specific focus is given to the investigation of turbulence proper
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{nomenclature}
 \entry{A}{You may include nomenclature here.}
+\entry{$\nu$}{Viscosity.}
+\entry{$x$}{Streamwise direction.}
+\entry{$y$}{Vertical direction.}
+\entry{$z$}{Spanwise direction.}
+\entry{$Re$}{Reynolds number.}
+\entry{$Re_{\tau}$}{Friction Reynolds number.}
+\entry{$DNS$}{Direct Numerical Simulation.}
+\entry{$ANL$}{Argonne National Laboratory.}
 \entry{$\alpha$}{There are two arguments for each entry of the nomemclature environment, the symbol and the definition.}
 \end{nomenclature}
 
@@ -103,56 +74,60 @@ The spacing between abstract and the text heading is two line spaces.  The prima
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{INTRODUCTION}
 
-A schematic of the turbulence channels simulated are shown in Fig.~\ref{fig:geometries}. In this figure, regions I, II and III are defined by two planes crossing the channel. Within the first region it is implemented a cycling region, Fig.~\ref{fig:inlet}.
-In this problem, the viscosity \(\nu\) is a function of the streamwise distance, expressed here by the spatial variable \(x\). This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
+A schematic of the turbulence channels simulated are shown in Fig.~\ref{fig:geometry_turbchannel}. In this figure, Regions I, II and III are defined by two planes crossing the channel. A cycling region is implemented within Region I, Fig.~\ref{fig:cycling_region}.
+In this problem, the viscosity \(\nu\) is a function of \(x\), i.e., the streamwise distance. This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along Regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
 
-In the present work, three cases varying the length of region II are studied. Cases I, II and III have their region II begining at \(x=4\pi\) and the length of region II are respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity_cases} shows the plot of the viscosity as a function of \(x\) for each one of these cases and Fig.~\ref{fig:reynolds_n} shows the plot of the Reynolds number for them.
+In the present work, three cases varying the length of Region II are studied. Cases I, II and III have their Region II length of respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity} shows the plot of the viscosity as a function of \(x\) for each one of these cases and Fig.~\ref{fig:reynolds} shows the plot of the Reynolds number for them.
 
 For all cases the inleat flow in region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}. Periodic condition is considered for the boundaries of the spamwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{turbchannel_a.png}
-	\includegraphics[trim = 0mm 0mm 0mm 20mm, width = 15mm]{axis.png}
-	\caption{GEOMETRY OF THE TURBULENCE CHANNEL, THE CHANNEL IS DIVIDED INTO THREE DIFFERENT REGIONS.} % subcaption
-	\label{fig:geometries}
+	\scalebox{0.5}
+	{\includegraphics{geometry_turbchannel.pdf}}
+	\scalebox{0.4}
+	{\includegraphics{axis.pdf}}
+	\caption{Geometry of the turbulence channel, the channel is divided into three different Regions.}
+	\label{fig:geometry_turbchannel}
 	\end{figure}
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{turbchannel_b.png}
-	\caption{CYCLIC REGION IN THE INLET.} 
-	\label{fig:inlet}
+	\scalebox{0.5}
+	{\includegraphics{cycling_region.pdf}}
+	\caption{Cyclic region in the inlet.}
+	\label{fig:cycling_region}
 \end{figure}
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{viscosity.png}
-	\caption{THE VISCOSITY FROM THE THREE CASES VARYING ALONG THE STREAMWISE DIRECTION.}
-	\label{fig:viscosity_cases}
+	\scalebox{0.5}
+	{\includegraphics{viscosity.pdf}}
+	\caption{The viscosity of the considered Cases as a function of \(x\).}
+	\label{fig:viscosity}
 	\end{figure}
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[trim = 20mm 15mm 30mm 10mm, width = 85mm]{Re_across_x.png}
-	\caption{THE REYNOLDS NUMBER FROM THE THREE CASES VARYING ALONG THE STREAMWISE DIRECTION.}
-	\label{fig:reynolds_n}
+	\scalebox{0.5}
+	{\includegraphics{reynolds.pdf}}
+	\caption{The Reynolds number as a function of the \(x\) for the considered Cases.}
+	\label{fig:reynolds}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{METHODS}
 
-In order to resolve the finest turbulent scales, the calculations of this work has been developed through Direct Numerical Simulation (DNS). To do so, a spectral element code Nek5000 was employed, where this code has been developed in Argonne National aboratory (ANL) and it has been validated in references \cite{merzari2013} and \cite{Obabko2011}.
+In order to resolve the finest turbulent scales, the calculations of this work has been developed through Direct Numerical Simulation (DNS). To do so Nek5000 was employed, a spectral element code developed in Argonne National Laboratory (ANL). Nek5000 has been validated in references \cite{merzari2013} and \cite{Obabko2011}.
 
-The solution of this method is given by trigonometric series, in each element a polynomial functions of up to the twelveth degree have been employed to discretize the velocity field. Fig.~\ref{fig:cross_grid} shows an example of the grid from half of the channel's cross section. One should notice that the discretization presented by this particular area is identical through all model's domain and it is only presented half of the cross-section for better visualization of the frame.
+The solution of this method is given by trigonometric series, in each element a polynomial functions of up to the twelveth degree have been employed to discretize the velocity field. Fig.~\ref{fig:mesh} shows an example of the grid from half of the channel's cross section. One should notice that the discretization presented by this particular area is identical through all model's domain and it is only presented half of the cross-section for better visualization of the frame.
 
 \begin{figure}[!htbp]
-\begin{center}
-\setlength{\unitlength}{0.012500in}%
-  \includegraphics[trim = 20mm 15mm 20mm 10mm, width = 90mm]{half_cross_section_mesh.png}
-\end{center}
-  \caption{THE GRID EMPLOYED IN THE SIMULATION FROM HALF OF THE CHANNEL'S CROSS SECTION.}
-  \label{fig:cross_grid}
+	\centering
+	\scalebox{0.16}
+	{\includegraphics{mesh.png}}
+	\caption{The grid employed in the simulation from half of the channel's cross section.}
+	\label{fig:mesh}
 \end{figure}
 
 DNS simulations are able to simulate the finest turbulent length scales without using any turbulent model. Since the present work is focused on studying the contribution of the smaller scales to the energy cascade, it is required to use DNS rather than Reynolds Average Navier-Stokes (RANS) or Large Eddy Simulations (LES), although there is a substantial growth of the computational cost.
@@ -171,10 +146,10 @@ The results from the three cases considered in this work are presented in this s
 
 \subsection*{Analysing the friction Reynolds number}
 
-The friction Reynolds number has been calculated via numerical simulations for Cases I, II and III. To do so, several velocities profiles along \(x\) were obtained from the simulations' results and the viscous stress \(\frac{d\bar{U}}{dy}\) for these locations were calculated. Such values can then be applied in the set of definitions given from Eqn.~\ref{tau_w} to Eqn.~\ref{Re_t} following presented in order to calculate \(Re_{\tau}\).
+The friction Reynolds number has been calculated via numerical simulations for Cases I, II and III. To do so, several velocities profiles along \(x\) were obtained from the simulations' results and the viscous stress \(\frac{d<U>}{dy}\) for these locations were calculated. Such values can then be applied in the set of definitions given from Eqn.~\ref{tau_w} to Eqn.~\ref{Re_t} following presented in order to calculate \(Re_{\tau}\).
 
 \begin{equation}
-{\tau}_w = \rho\nu\left(\frac{d\bar{U}}{dy}\right)_{y=0}
+{\tau}_w = \rho\nu\left(\frac{d<U>}{dy}\right)_{y=0}
 \label{tau_w}
 \end{equation}
 
@@ -203,12 +178,12 @@ Re_{\tau} = 0.09Re^{0.88}
 
 The Reynolds numbers used to supply Eqn.~\ref{anl_ret} are those varying through \(x\) from Cases I, II and III, as presented in Fig.~\ref{fig:re_t_x}. For simplicity, Reynolds numbers as functions of \(x\) are named in this study as \(Re_{I}(x)\), \(Re_{II}(x)\) and \(Re_{III}(x)\), while the friction Reynolds number functions are named \(Re_{{\tau}I}(x)\), \(Re_{{\tau}II}(x)\) and \(Re_{{\tau}III}(x)\) in reference to their respective cases.
 
-Fig.~\ref{fig:re_t_x} shows the plot of the friction Reynolds number thourgh \(x\) calculated via CFD analisys and by the analytical Eqn.~\ref{anl_ret} for Case I. In this figure, \(Re_{\tau}\) calculated via DNS is delayed in space when compared to the value obtained using the analytical solution provided by Eqn.~\ref{anl_ret}. This fact shows that the effect of the change in the viscosity doesn't cause an immediate effect on the turbulence of the flow. In this sense, the friction Reynolds number calculated through Eqn.~\ref{anl_ret} can be treated as signal over the space \(x\), and a convolution operation can be performed yielding a delayed signal that can be adjusted so it matches to the simulated results. Furthermore, the function \(F_{CI}(x)\) plotted in graph from Fig.~\ref{fig:re_t_x} is the result of this approach, a detailed description about the steps to derive the convolution functions for this study is provided in the following subsection.
+Fig.~\ref{fig:re_t_x} shows the plot of the friction Reynolds number thourgh \(x\) calculated via CFD analisys and by the analytical Eqn.~\ref{anl_ret} for Case I. In this figure, \(Re_{\tau}\) calculated via DNS is delayed in space when compared to the value obtained using the analytical solution provided by Eqn.~\ref{anl_ret}. This fact shows that the effect of the change in the viscosity doesn't cause an immediate effect on the turbulence of the flow. In this sense, the friction Reynolds number calculated through Eqn.~\ref{anl_ret} can be treated as signal over the space \(x\), and a convolution operation can be performed yielding a delayed signal that can be adjusted so it matches to the simulated results. Furthermore, the function \(F_{CI}(x)\) plotted in graph from Fig.~\ref{fig:re_t_x} is the result of this approach, a detailed description about the steps to derive the convolution functions for this study are provided in the following subsection.
 
 \begin{figure}[!htbp]
 \begin{center}
 \setlength{\unitlength}{0.012500in}%
-  \includegraphics[trim = 20mm 15mm 20mm 10mm, width = 90mm]{Re_t_CI.png}
+  \includegraphics[trim = 20mm 15mm 20mm 10mm, width = 85mm]{convolution_CI.pdf}
 \end{center}
   \caption{THE FRICTION REYNOLDS NUMBER THOURGH THE STREAMWISE DIRECTION FOR CASE I.}
   \label{fig:re_t_x}
@@ -227,7 +202,7 @@ F(t) =  \int_{-\infty}^{+\infty} Re_{\tau}(\chi)g(x-\chi)d\chi
 
 Since we are dealing with a delayed signal, a decaying exponential has been used as the shifting function, i.e., \(g(x-\chi)=e^{-Rx}\), like proposed in Ref.~\cite{signals}, where \(R\) is the decaying constant for region II.
 
-The simulated channels in this study are divided in three regions, like shown in Fig.~\ref{fig:geometries}. Since there is no delay in region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\) for \(x{\leq}4\pi\). However, in region II a delay can be seen and a convolution operation needs to be performed for determining a delayed signal. The friction Reynolds number is a linear function given by Eqn.~\ref{linear_ret} in the second region.
+As mentioned earlier, the simulated channels in this study are divided in three regions, like shown in Fig.~\ref{fig:geometries}. Since there is no delay in region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\) for \(x{\leq}4\pi\). However, in region II a delay can be seen and a convolution operation needs to be performed for determining a delayed signal. The friction Reynolds number is a linear function given by Eqn.~\ref{linear_ret} in the second region.
 
 \begin{equation}
 Re_{\tau}(x)=ax+550
@@ -250,10 +225,10 @@ F(x)= (20000-{\Lambda})(1-e^{-C(x-{\delta}_{R})})+{\Lambda}
 
 Where \({\delta}_{R}\) is the \(x\) location of the interface between region II and III depending on which one of the three cases studied is being analysed. Meanwhile, \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{R}-4{\pi})}-1)+\frac{a}{R}({\delta}_{R}-4{\pi})+550\), and it represents the contribution from the predecessors regions.
 
-Tab.~\ref{table_conv} shows the parameters:
+Tab.~\ref{table_conv} shows the important parameters from the convolution functions for each one of the three cases considered in this study.
 
 \begin{table}[t]
-\caption{IMPORTANT PARAMETERS FROM THE CONSIDERED CASES.}
+\caption{IMPORTANT PARAMETERS FROM THE CASES CONSIDERED.}
 \begin{center}
 \centering
 \label{table_conv}
@@ -272,7 +247,35 @@ III	&	        \(4{\pi}\)		&	\(8{\pi}\)	&	XXX	&	XXX \\
 
 \subsection*{Reynolds stresses and turbulent structures}
 
-More good stuff.
+Fig.~\ref{fig:velocity_CI} shows the instantaneous velocity scalar field in the buffer layer for case I, while Figures from~\ref{fig:u_profile_CI} to~\ref{fig:ww_profile_CI} shows respectively the \(<u>\), \(<uu>\), \(<vv>\) and  \(<ww>\) profiles through the channel for this same case. In all of these plots the \(y^+=30\) turbulent boundary layer is also ploted for this simulation.
+
+\begin{figure*}[h]
+
+%	\scalebox{0.15}
+	\includegraphics[width=\textwidth]{streaks.pdf}
+	\caption{INSTANTANEOUS VELOCITY SCALAR FIELD IN THE BUFFER LAYER FOR CASE I.}
+	\label{fig:velocity_CI}
+\end{figure*}
+
+\begin{figure}[!htbp]
+\begin{center}
+\setlength{\unitlength}{0.012500in}%
+%  \includegraphics[width=\textwidth, width = 90mm]{u_along_CI.png}
+\end{center}
+  \caption{\(<u>\) PROFILES THROUGH \(x\) AND \(y^+=30\) TURBULENT BOUNDARY LAYER IN CASE I.}
+  \label{fig:u_profile_CI}
+\end{figure}
+
+\begin{figure}[!htbp]
+\begin{center}
+%  \includegraphics[width=\textwidth, width = 90mm]{uu_along_CI.png}
+\end{center}
+  \caption{\(<uu>\) PROFILES THROUGH \(x\) AND \(y^+=30\) TURBULENT BOUNDARY LAYER IN CASE I.}
+  \label{fig:uu_profile_CI}
+\end{figure}
+
+
+Fig.~\ref{fig:velocity_CI} shows the instantaneous velocity scalar field for case I in the Buffer layer, i.e., \(5<y^+<30\)
 
 
 
