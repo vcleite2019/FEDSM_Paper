@@ -69,6 +69,13 @@ In this study, specific focus is given to the investigation of turbulence proper
 \entry{${\tau}_w$}{Shear stress at the wall.}
 \entry{$u_{\tau}$}{Friction velocity.}
 \entry{$Re_{\tau}$}{Friction Reynolds number.}
+\entry{$\delta$}{Height of the turbulence channel.}
+\entry{${F_{Ci}}$}{Delayed function of Cases ${i}$=I,II and III.}
+\entry{$a$}{Viscosity linear coefficient.}
+\entry{$R$}{Relaxing parameter.}
+\entry{$BLABLABLA$}{Bullshit.}
+\entry{$BLABLABLA$}{Bullshit.}
+\entry{$BLABLABLA$}{Bullshit.}
 
 \entry{$\alpha$}{There are two arguments for each entry of the nomemclature environment, the symbol and the definition.}
 \end{nomenclature}
@@ -137,11 +144,12 @@ The solution of this method is given by trigonometric series, in each element a 
 DNS simulations are able to simulate the finest turbulent length scales without using any turbulent model. Since the present work is focused on studying the contribution of the smaller scales to the energy cascade, it is required to use DNS rather than Reynolds Average Navier-Stokes (RANS) or Large Eddy Simulations (LES), although there is a substantial growth of the computational cost.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{METHODS - CONVOLUTION OPERATOR FOR THE FRICTION REYNOLDS NUMBER}
+\section*{METHODS - CONVOLUTION ANALYSIS OF THE FRICTION REYNOLDS NUMBER}
 
-The friction Reynolds number has been calculated via numerical simulations for Cases I, II and III and this result was compared to the values obtained using an existed expression in the literature, Eqn.~\ref{anl_ret} from Ref.~\cite{pope}, which is valid for fully developed turbulent flows. As it was expected, there is a delay between the \(Re_{\tau}\) in the simulations values when compared to the values obtained using the mentioned expression. This way, these results are treated as signals and a convolution operation is performed such that a function that matches with the obtained values is built. 
 
-To calculate the friction Reynolds number from the simulations several velocities profiles along \(x\) were obtained from the results and the viscous stress \(\frac{d<U>}{dy}\) for these locations is calculated. Such values can then be applied in the set of definitions given from Eqn.~\ref{shear_wall} to Eqn.~\ref{friction_reynolds} following presented in order to calculate \(Re_{\tau}\).
+The friction Reynolds number has been calculated via numerical simulations for Cases I, II and III and this result was compared to the values obtained using an existed expression from Ref.~\cite{pope} valid for fully developed turbulent flows. A delay in space can be seen between \(Re_{\tau}\) when comparing the simulations' results with the values yielded from the mentioned expression. This way, these results are treated as signals in the space and a convolution operation is performed over the analytical expression for fully developed turbulent flows in order to built a function that matches with the obtained values from the simulations.
+
+To calculate the friction Reynolds number from the simulations several velocities profiles along \(x\) were obtained from the results and the viscous stress \(\frac{d<U>}{dy}\) for these locations are calculated. Such values can then be applied in the set of definitions given from Eqn.~\ref{shear_wall} to Eqn.~\ref{friction_reynolds} following presented in order to calculate \(Re_{\tau}\).
 
 \begin{equation}
 {\tau}_w = \rho\nu\left(\frac{d<U>}{dy}\right)_{y=0}
@@ -164,44 +172,48 @@ Re_{\tau} = \frac{u_{\tau}\delta}{\nu}
 
 Where \(\delta\) is the height of the simulated channels. For all Cases studied here this is a constant parameter \(\delta=2\).
 
-The friction Reynolds number is calculated using Eqn.~\ref{friction_reynolds} using the numeric simulations' results, then they are compared to the values obtained using an existed expression in the literature, Eqn.~\ref{reynolds_approximation} from Ref.~\cite{pope}.
+The friction Reynolds number calculated using Eqn.~\ref{friction_reynolds} with the numeric simulations' results is then compared with Eqn.~\ref{reynolds_approximation} from Ref.~\cite{pope}, which is valid for fully developed turbulent flows.
 
 \begin{equation}
 Re_{\tau} = 0.09Re^{0.88}
 \label{reynolds_approximation}
 \end{equation}
 
-The Reynolds numbers used to supply Eqn.~\ref{reynolds_approximation} are those varying through \(x\) from Cases I, II and III, as presented in Fig.~\ref{fig:reynolds}. A function that delays the expected result using the approximation given by Eqn. ~\ref{reynolds_approximation} is then built. Eqn.~\ref{convolution} shows the convolution between the Reynolds number function \(Re(x)\), i.e., one of those presented in Fig.~\ref{fig:reynolds}, and a shifting function \(g(x-\chi)\), where \(\chi\) is a dummy variable.
+The Reynolds numbers used to supply Eqn.~\ref{reynolds_approximation} are those varying through \(x\) from Cases I, II and III, as presented in Fig.~\ref{fig:reynolds}. The convolution to be performed over Eqn.~\ref{reynolds_approximation} is given by Eqn.~\ref{convolution}. In this equation \(Re(\chi)\) stands for the analytical approximation given by Eqn.~\ref{reynolds_approximation}, \(g(x-\chi)\)  is a shifting function and \(\chi\) is simply a dummy variable for the streamwise distance.
 
 \begin{equation}
-F(t) =  \int_{-\infty}^{+\infty} Re_{\tau}(\chi)g(x-\chi)d\chi
+F(x) =  \int_{-\infty}^{+\infty} Re_{\tau}(\chi)g(x-\chi)d\chi
 \label{convolution}
 \end{equation}
 
-Since we are dealing with a delayed signal, a decaying exponential has been used as the shifting function, i.e., \(g(x-\chi)=e^{-Rx}\), like proposed in Ref.~\cite{signals}, where \(R\) is the decaying constant for region II.
+As mentioned earlier, the simulated channels in the present study are divided in three Regions, as shown in Fig.~\ref{fig:geometries} and a delayed function is built for each one of those. Since there is no delay in Region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\). Differently, in Region II and III the results from the numerical experiments are delayed when compared to those from Eqn.~\ref{reynolds_approximation} and because of that a convolution operator takes place. Since we are dealing with a delayed signal in both Regions, a decaying exponential has been used as a shifting function, as proposed in Ref.~\cite{signals}.
 
-As mentioned earlier, the simulated channels in this study are divided in three regions, like shown in Fig.~\ref{fig:geometries}. Since there is no delay in region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\) for \(x{\leq}4\pi\). However, in region II a delay can be seen and a convolution operation needs to be performed for determining a delayed signal. The friction Reynolds number is a linear function given by Eqn.~\ref{linear_ret} in the second region.
+In Region II, the friction Reynolds number is a linear function given by Eqn.~\ref{region2_reynolds}.
 
 \begin{equation}
 Re_{\tau}(x)=ax+550
-\label{linear_ret}
+\label{region2_reynolds}
 \end{equation}
 
-Where \(a\) is the linear coefficient that depends on which one of the three cases is being considered. Using Eqn.~\ref{linear_ret} in conjunction to the definition from Eqn.~\ref{convolution}, one may derive Eqn.~\ref{conv_region2}, which is the convolution function valid for region II for the cases considered.
+Where \(a\) is the linear coefficient of the increasing viscosity for each one of the three cases in Region II. Using Eqn.~\ref{region2_reynolds} in conjunction to the definition from Eqn.~\ref{convolution}, one may derive Eqn.~\ref{region2_delayed}, which is the delayed function valid for Region II of the considered Cases.
 
 \begin{equation}
 F(x)= \frac{a}{R^2}(e^{-R(x-4{\pi})}-1)+\frac{a}{R}(x-4{\pi})+550
-\label{conv_region2}
+\label{region2_delayed}
 \end{equation}
+
+Where \(R\) is named relaxing parameter and it stands for the exponential decaying constant to be used in the shifting function \(g(x-\chi)\) when dealing with Region II.
 
 Lastly, another convolution is performed for region III. However, in this region the signal to be delayed has a constant value, i.e., \(Re_{\tau}(x)=20000\), differing from region II. Because of this, a shifting function with a different decaying constant needs to be considered, thus \(g(x-\chi)=e^{-Cx}\), where \(C\) is the decaying constant for region III. Finally, Eqn.~\ref{conv_region3} can be derived as the convolution function in region III.
 
+Eqn.~\ref{region3_delayed} is the delayed function yielded applying Eqn.~\ref{convolution} over Region III, where a constant friction Reynolds number \(Re_{\tau}\) predicted by Eqn.~\ref{reynolds_approximation} takes place.
+
 \begin{equation}
 F(x)= (20000-{\Lambda})(1-e^{-C(x-{\delta}_{R})})+{\Lambda}
-\label{conv_region3}
+\label{region3_delayed}
 \end{equation}
 
-Where \({\delta}_{R}\) is the \(x\) location of the interface between region II and III depending on which one of the three cases studied is being analysed. Meanwhile, \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{R}-4{\pi})}-1)+\frac{a}{R}({\delta}_{R}-4{\pi})+550\), and it represents the contribution from the predecessors regions.
+Where \({\delta}_{R}\) is the \(x\) location of the interface between Region II and III depending on which one of the three cases studied is being analysed. Meanwhile, \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{R}-4{\pi})}-1)+\frac{a}{R}({\delta}_{R}-4{\pi})+550\), and it represents the contribution from the predecessors regions.
 
 Fig.~\ref{fig:re_t_x} shows the plot of the friction Reynolds number thourgh \(x\) calculated via CFD analisys and by the analytical Eqn.~\ref{anl_ret} for Case I. In this figure, \(Re_{\tau}\) calculated via DNS is delayed in space when compared to the value obtained using the analytical solution provided by Eqn.~\ref{anl_ret}. This fact shows that the effect of the change in the viscosity doesn't cause an immediate effect on the turbulence of the flow. In this sense, the friction Reynolds number calculated through Eqn.~\ref{anl_ret} can be treated as signal over the space \(x\), and a convolution operation can be performed yielding a delayed signal that can be adjusted so it matches to the simulated results. Furthermore, the function \(F_{CI}(x)\) plotted in graph from Fig.~\ref{fig:re_t_x} is the result of this approach, a detailed description about the steps to derive the convolution functions for this study are provided in the following subsection.
 
