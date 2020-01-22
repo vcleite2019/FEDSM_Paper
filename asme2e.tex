@@ -53,7 +53,7 @@
 
 In particular Nek5000, a spectral-element computational fluid dynamics (CFD) code, will be used to perform DNS of fluid flow in the transition regime for channel flow with varying viscosity.  We set up a novel benchmark case: the channel is extended in the stream-wise direction up to 20pi. The viscosity is kept constant in the first 4pi region. This inlet region is used as a cyclic region to obtain a fully developed flow profile at the beginning of the ramping region. The ramping region (4pi -20pi) is defined as a transition region where the viscosity is linearly decreased along the channel. The flow is homogenous in the span-wise direction due to the periodic boundary conditions. Due to the cyclic and wall boundary conditions, the flow is non-homogenous in the stream-wise and wall-normal direction respectively.
 
-In this study, specific focus is given to the investigation of turbulence properties and structures in the near-wall region along the flow direction. Detailed turbulence budgets are collected and investigated. As expected, the results show that variation in the Reynolds across a channel does not cause an immediate change in the size of turbulent structures in the ramp region and a delay is in fact observed. Moreover, the results from the present study are compared with a correlation available in the literature for the friction velocity and as a function of the Reynolds-number.}
+In this study, specific focusS is given to the investigation of turbulence properties and structures in the near-wall region along the flow direction. Detailed turbulence budgets are collected and investigated. As expected, the results show that variation in the Reynolds across a channel does not cause an immediate change in the size of turbulent structures in the ramp region and a delay is in fact observed. Moreover, the results from the present study are compared with a correlation available in the literature for the friction velocity and as a function of the Reynolds-number.}
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,7 +233,8 @@ F(x) = \\
 
 \section*{RESULTS}
 
-The results from the three Cases considered in the present work are presented in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are presented. Third, the results 
+Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, the \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are presented. Third, low velocity streaks are presented following it by the s
+ \(<u>\) and \(<uu>\) profiles along the streamwise direction for Case I are presented, 
 
 \subsection*{Model verification}
 
@@ -252,6 +253,8 @@ The results from the three Cases considered in the present work are presented in
 \caption{Comparing \(<uu>\) from Region I in Case I with already existed data in Ref~\cite{iwamoto2002}.}
 \label{fig:comparing_uu}
 \end{figure}
+
+\subsection*{The friction Reynolds number along \(x\)}
 
 \begin{figure}[t]
 \centering
@@ -316,6 +319,14 @@ The results from the three Cases considered in the present work are presented in
 	\caption{A cross section of the instantaneous streamwise velocity field at 0.01 from the wall.}
 	\label{fig:streaks}
 \end{figure*}
+
+\begin{figure}[t]
+\centering
+\scalebox{0.5}
+{\includegraphics{spanwise_correlation.pdf}}
+\caption{Two-point correlation of \(u\) over the spanwise direction at different streamwise distances.}
+\label{fig:spanwise_correlation}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{CONCLUSIONS}
