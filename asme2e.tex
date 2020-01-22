@@ -94,7 +94,7 @@ In the present work, three cases varying the length of Region II are studied. Ca
 
 For all three Cases the inleat flow in Region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}. Periodic condition is considered for the boundaries of the spamwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 	\centering
 	\scalebox{0.5}
 	{\includegraphics{geometry_turbchannel.pdf}}
@@ -104,7 +104,7 @@ For all three Cases the inleat flow in Region I is considered to be fully develo
 	\label{fig:geometry_turbchannel}
 	\end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 	\centering
 	\scalebox{0.5}
 	{\includegraphics{cycling_region.pdf}}
@@ -112,7 +112,7 @@ For all three Cases the inleat flow in Region I is considered to be fully develo
 	\label{fig:cycling_region}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 	\centering
 	\scalebox{0.5}
 	{\includegraphics{viscosity.pdf}}
@@ -120,7 +120,7 @@ For all three Cases the inleat flow in Region I is considered to be fully develo
 	\label{fig:viscosity}
 	\end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 	\centering
 	\scalebox{0.5}
 	{\includegraphics{reynolds.pdf}}
@@ -135,7 +135,7 @@ In order to resolve the finest turbulent scales, the calculations of this work h
 
 The solution of this method is given by trigonometric series, in each element a polynomial functions of up to the twelveth degree have been employed to discretize the velocity field. Fig.~\ref{fig:mesh} shows an example of the grid from half of the channel's cross section. One should notice that the discretization presented by this particular area is identical through all model's domain and it is only presented half of the cross-section for better visualization of the frame.
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 	\centering
 	\scalebox{0.16}
 	{\includegraphics{mesh.png}}
@@ -237,7 +237,7 @@ The results from the three Cases considered in the present work are presented in
 
 \subsection*{Model verification}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 \centering
 \scalebox{0.5}
 {\includegraphics{comparing_u.pdf}}
@@ -245,7 +245,7 @@ The results from the three Cases considered in the present work are presented in
 \label{fig:comparing_u}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 \centering
 %\scalebox{0.5}
 %{\includegraphics{comparing_uu.pdf}}
@@ -253,7 +253,7 @@ The results from the three Cases considered in the present work are presented in
 \label{fig:comparing_uu}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 \centering
 \scalebox{0.5}
 {\includegraphics{convolution_CI.pdf}}
@@ -261,7 +261,7 @@ The results from the three Cases considered in the present work are presented in
 \label{fig:convolution_CI}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 \centering
 \scalebox{0.5}
 {\includegraphics{convolution_CII.pdf}}
@@ -269,7 +269,7 @@ The results from the three Cases considered in the present work are presented in
 \label{fig:convolution_CII}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[t]
 \centering
 \scalebox{0.5}
 {\includegraphics{convolution_CIII.pdf}}
@@ -277,37 +277,43 @@ The results from the three Cases considered in the present work are presented in
 \label{fig:convolution_CIII}
 \end{figure}
 
-\subsection*{The delayed functions for the friction Reynolds number}
+\begin{figure}[t]
+\centering
+\scalebox{0.5}
+{\includegraphics{log_law_CI_upstream.pdf}}
+\caption{\(u^+\) versus \(y^+\) obtained from Case I at \(x=4{\pi}\) (end of Region I), \(x=12{\pi}\) (middle of Region II) and \(x=20{\pi}\) (end of Region II) compared to the log law.}
+\label{fig:log_law_CI_upstream}
+\end{figure}
 
-\begin{figure*}[h]
-%	\scalebox{0.15}
+\begin{figure}[t]
+\centering
+\scalebox{0.4}
+{\includegraphics{log_law_CI_downstream.pdf}}
+\caption{\(u^+\) versus \(y^+\) obtained from Case I at \(x=20{\pi}\) (end of Region I), \(x=23{\pi}\) (Region III) and \(x=28{\pi}\) (Region III) compared to the log law.}
+\label{fig:log_law_CI_downstream}
+\end{figure}
+
+\subsection*{Turbulent structures}
+
+
+
+\begin{figure*}[t]
 	\includegraphics[width=\textwidth]{streaks.pdf}
-	\caption{INSTANTANEOUS VELOCITY SCALAR FIELD IN THE BUFFER LAYER FOR CASE I.}
-	\label{fig:velocity_CI}
+	\caption{A cross section of the instantaneous streamwise velocity field at 0.01 from the wall.}
+	\label{fig:streaks}
 \end{figure*}
 
-\begin{figure}[!htbp]
-\begin{center}
-\setlength{\unitlength}{0.012500in}%
-%  \includegraphics[width=\textwidth, width = 90mm]{u_along_CI.png}
-\end{center}
-  \caption{\(<u>\) PROFILES THROUGH \(x\) AND \(y^+=30\) TURBULENT BOUNDARY LAYER IN CASE I.}
-  \label{fig:u_profile_CI}
-\end{figure}
-
-\begin{figure}[!htbp]
-\begin{center}
-%  \includegraphics[width=\textwidth, width = 90mm]{uu_along_CI.png}
-\end{center}
-  \caption{\(<uu>\) PROFILES THROUGH \(x\) AND \(y^+=30\) TURBULENT BOUNDARY LAYER IN CASE I.}
-  \label{fig:uu_profile_CI}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{CONCLUSIONS}
 
 
-Fig.~\ref{fig:velocity_CI} shows the instantaneous velocity scalar field for case I in the Buffer layer, i.e., \(5<y^+<30\)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgment}
+Thanks go to D. E. Knuth and L. Lamport for developing the wonderful word processing software packages \TeX\ and \LaTeX. I also would like to thank Ken Sprott, Kirk van Katwyk, and Matt Campbell for fixing bugs in the ASME style file \verb+asme2e.cls+, and Geoff Shiflett for creating 
+ASME bibliography stype file \verb+asmems4.bst+.
+\end{acknowledgment}
 
-
-
+\bibliographystyle{asmems4}
 
 \bibliography{asme2e}
 \appendix   
