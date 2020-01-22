@@ -3,56 +3,46 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: asme2e.aux
 The style file: asmems4.bst
 Database file #1: asme2e.bib
-You're missing a field part---line 43 of file asme2e.bib
- :  number = 
- :           ,
-I'm skipping whatever remains of this entry
-You're missing a field part---line 55 of file asme2e.bib
- :  number = 
- :           ,
-I'm skipping whatever remains of this entry
-Warning--empty year in hoyas2008
-Warning--empty year in merzari2013
 Warning--empty year in signals
-You've used 5 entries,
+You've used 6 entries,
             1984 wiz_defined-function locations,
-            514 strings with 4135 characters,
-and the built_in function-call counts, 814 in all, are:
-= -- 62
-> -- 35
-< -- 1
-+ -- 15
-- -- 10
-* -- 43
-:= -- 138
-add.period$ -- 17
-call.type$ -- 5
-change.case$ -- 4
+            529 strings with 4398 characters,
+and the built_in function-call counts, 1245 in all, are:
+= -- 115
+> -- 39
+< -- 2
++ -- 17
+- -- 11
+* -- 58
+:= -- 186
+add.period$ -- 21
+call.type$ -- 6
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 40
-empty$ -- 92
-format.name$ -- 10
-if$ -- 180
+cite$ -- 7
+duplicate$ -- 72
+empty$ -- 125
+format.name$ -- 11
+if$ -- 299
 int.to.chr$ -- 0
-int.to.str$ -- 5
+int.to.str$ -- 6
 missing$ -- 4
-newline$ -- 30
-num.names$ -- 5
-pop$ -- 23
+newline$ -- 36
+num.names$ -- 6
+pop$ -- 24
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 7
+skip$ -- 44
 stack$ -- 0
-substring$ -- 0
-swap$ -- 7
-text.length$ -- 1
+substring$ -- 24
+swap$ -- 32
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 5
-width$ -- 6
-write$ -- 57
-(There were 2 error messages)
+warning$ -- 1
+while$ -- 8
+width$ -- 7
+write$ -- 76
+(There was 1 warning)
