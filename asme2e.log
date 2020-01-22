@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 JAN 2020 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 JAN 2020 15:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,7 +609,17 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 243--244
  [][] 
  []
 
-<convolution_CI.pdf, id=1224, 562.1pt x 421.575pt>
+<comparing_uu.pdf, id=1224, 562.1pt x 421.575pt>
+File: comparing_uu.pdf Graphic file (type pdf)
+<use comparing_uu.pdf>
+Package pdftex.def Info: comparing_uu.pdf  used on input line 251.
+(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 251--252
+ [][] 
+ []
+
+<convolution_CI.pdf, id=1225, 562.1pt x 421.575pt>
 File: convolution_CI.pdf Graphic file (type pdf)
 <use convolution_CI.pdf>
 Package pdftex.def Info: convolution_CI.pdf  used on input line 259.
@@ -619,7 +629,7 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 259--260
  [][] 
  []
 
-<convolution_CII.pdf, id=1225, 562.1pt x 421.575pt>
+<convolution_CII.pdf, id=1226, 562.1pt x 421.575pt>
 File: convolution_CII.pdf Graphic file (type pdf)
 <use convolution_CII.pdf>
 Package pdftex.def Info: convolution_CII.pdf  used on input line 267.
@@ -629,7 +639,7 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 267--268
  [][] 
  []
 
-<convolution_CIII.pdf, id=1226, 562.1pt x 421.575pt>
+<convolution_CIII.pdf, id=1227, 562.1pt x 421.575pt>
 File: convolution_CIII.pdf Graphic file (type pdf)
 <use convolution_CIII.pdf>
 Package pdftex.def Info: convolution_CIII.pdf  used on input line 275.
@@ -639,7 +649,7 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
-<log_law_CI_upstream.pdf, id=1227, 562.1pt x 421.575pt>
+<log_law_CI_upstream.pdf, id=1228, 562.1pt x 421.575pt>
 File: log_law_CI_upstream.pdf Graphic file (type pdf)
 <use log_law_CI_upstream.pdf>
 Package pdftex.def Info: log_law_CI_upstream.pdf  used on input line 283.
@@ -649,22 +659,42 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
-<log_law_CI_downstream.pdf, id=1228, 721.69624pt x 542.025pt>
+<log_law_CI_downstream.pdf, id=1229, 562.1pt x 421.575pt>
 File: log_law_CI_downstream.pdf Graphic file (type pdf)
 <use log_law_CI_downstream.pdf>
 Package pdftex.def Info: log_law_CI_downstream.pdf  used on input line 291.
-(pdftex.def)             Requested size: 721.69449pt x 542.02367pt.
+(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (31.21152pt too wide) in paragraph at lines 291--292
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 291--292
  [][] 
  []
 
-<streaks.pdf, id=1229, 3303.34125pt x 1179.40625pt>
+<u_CI.pdf, id=1230, 562.1pt x 421.575pt>
+File: u_CI.pdf Graphic file (type pdf)
+<use u_CI.pdf>
+Package pdftex.def Info: u_CI.pdf  used on input line 301.
+(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 301--302
+ [][] 
+ []
+
+<uu_CI.pdf, id=1231, 562.1pt x 421.575pt>
+File: uu_CI.pdf Graphic file (type pdf)
+<use uu_CI.pdf>
+Package pdftex.def Info: uu_CI.pdf  used on input line 309.
+(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 309--310
+ [][] 
+ []
+
+<streaks.pdf, id=1232, 3303.34125pt x 1216.545pt>
 File: streaks.pdf Graphic file (type pdf)
 <use streaks.pdf>
-Package pdftex.def Info: streaks.pdf  used on input line 301.
-(pdftex.def)             Requested size: 542.025pt x 193.51385pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 312.
+Package pdftex.def Info: streaks.pdf  used on input line 315.
+(pdftex.def)             Requested size: 542.025pt x 199.60748pt.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 326.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -687,22 +717,18 @@ Underfull \hbox (badness 1092) in paragraph at lines 34--39
 \OT1/ptm/m/n/10 Tokyo, Bunkyo-ku, Tokyo 113, June.  See also URL
  []
 
-) [5 <./convolution_CI.pdf> <./convolution_CII.pdf> <./convolution_CIII.pdf> <.
-/log_law_CI_upstream.pdf>] [6
-
- <./log_law_CI_downstream.pdf>] [7 <./streaks.pdf>] (./asme2e.aux)
+) [5 <./comparing_uu.pdf> <./convolution_CI.pdf> <./convolution_CII.pdf> <./con
+volution_CIII.pdf>] [6 <./log_law_CI_upstream.pdf> <./log_law_CI_downstream.pdf
+> <./u_CI.pdf> <./uu_CI.pdf>] [7 <./streaks.pdf>] (./asme2e.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 13492 strings out of 492616
- 250784 string characters out of 6129482
- 437953 words of memory out of 5000000
- 17294 multiletter control sequences out of 15000+600000
+ 13508 strings out of 492616
+ 251082 string characters out of 6129482
+ 439953 words of memory out of 5000000
+ 17307 multiletter control sequences out of 15000+600000
  569124 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,63p,836b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -719,10 +745,10 @@ s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw
 8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
 texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on asme2e.pdf (7 pages, 3634926 bytes).
+Output written on asme2e.pdf (7 pages, 3742799 bytes).
 PDF statistics:
- 1411 PDF objects out of 1440 (max. 8388607)
- 774 compressed objects within 8 object streams
+ 1470 PDF objects out of 1728 (max. 8388607)
+ 819 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
