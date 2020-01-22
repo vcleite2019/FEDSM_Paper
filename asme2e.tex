@@ -235,49 +235,51 @@ F(x) = \\
 
 The results from the three Cases considered in the present work are presented in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are presented. Third, the results 
 
-
-is c the friction Reynolds number variation along the streamwise direction \(x\) of the channels are computed and compared with an expression for \(Re_{\tau}\) as a function of the Reynolds number existed in Ref.~\cite{pope}. This analysis shows the fact that the friction Reynolds number due to a viscosity change imposed through region II is not immediate. Thereon, Reynolds stresses are collected and turbulent structures are investigated along the simulated channels.
-
-Fig.~\ref{fig:re_t_x} shows the plot of the friction Reynolds number thourgh \(x\) calculated via CFD analisys and by the analytical Eqn.~\ref{anl_ret} for Case I. In this figure, \(Re_{\tau}\) calculated via DNS is delayed in space when compared to the value obtained using the analytical solution provided by Eqn.~\ref{anl_ret}. This fact shows that the effect of the change in the viscosity doesn't cause an immediate effect on the turbulence of the flow. In this sense, the friction Reynolds number calculated through Eqn.~\ref{anl_ret} can be treated as signal over the space \(x\), and a convolution operation can be performed yielding a delayed signal that can be adjusted so it matches to the simulated results. Furthermore, the function \(F_{CI}(x)\) plotted in graph from Fig.~\ref{fig:re_t_x} is the result of this approach, a detailed description about the steps to derive the convolution functions for this study are provided in the following subsection.
+\subsection*{Model verification}
 
 \begin{figure}[!htbp]
-\begin{center}
-\setlength{\unitlength}{0.012500in}%
-  \includegraphics[trim = 20mm 15mm 20mm 10mm, width = 85mm]{convolution_CI.pdf}
-\end{center}
-  \caption{THE FRICTION REYNOLDS NUMBER THOURGH THE STREAMWISE DIRECTION FOR CASE I.}
-  \label{fig:re_t_x}
+\centering
+\scalebox{0.5}
+{\includegraphics{comparing_u.pdf}}
+\caption{Comparing \(u^+\) from Region I in Case I with already existed data in Ref~\cite{iwamoto2002}.}
+\label{fig:comparing_u}
 \end{figure}
 
-
-
-
-Tab.~\ref{table_conv} shows the important parameters from the convolution functions for each one of the three cases considered in this study.
-
-\begin{table}[t]
-\caption{IMPORTANT PARAMETERS FROM THE CASES CONSIDERED.}
-\begin{center}
+\begin{figure}[!htbp]
 \centering
-\label{table_conv}
-\begin{tabular}{c l l l l l}
-& & & & \\ % put some space after the caption
-\hline
-Case	&	Region II length	&	\({\delta}_R\)	&	\(R\)	&	\(C\) \\
-\hline
-I	&	        \(16{\pi}\)	&	\(20{\pi}\)	&	XXX	&	XXX \\
-II	&	        \(8{\pi}\)		&	\(12{\pi}\)	&	XXX	&	XXX \\
-III	&	        \(4{\pi}\)		&	\(8{\pi}\)	&	XXX	&	XXX \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+%\scalebox{0.5}
+%{\includegraphics{comparing_uu.pdf}}
+\caption{Comparing \(<uu>\) from Region I in Case I with already existed data in Ref~\cite{iwamoto2002}.}
+\label{fig:comparing_uu}
+\end{figure}
 
-\subsection*{Reynolds stresses and turbulent structures}
+\begin{figure}[!htbp]
+\centering
+\scalebox{0.5}
+{\includegraphics{convolution_CI.pdf}}
+\caption{Friction Reynolds number through \(x\) for Case I.}
+\label{fig:convolution_CI}
+\end{figure}
 
-Fig.~\ref{fig:velocity_CI} shows the instantaneous velocity scalar field in the buffer layer for case I, while Figures from~\ref{fig:u_profile_CI} to~\ref{fig:ww_profile_CI} shows respectively the \(<u>\), \(<uu>\), \(<vv>\) and  \(<ww>\) profiles through the channel for this same case. In all of these plots the \(y^+=30\) turbulent boundary layer is also ploted for this simulation.
+\begin{figure}[!htbp]
+\centering
+\scalebox{0.5}
+{\includegraphics{convolution_CII.pdf}}
+\caption{Friction Reynolds number through \(x\) for Case II.}
+\label{fig:convolution_CII}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\scalebox{0.5}
+{\includegraphics{convolution_CIII.pdf}}
+\caption{Friction Reynolds number through \(x\) for Case III.}
+\label{fig:convolution_CIII}
+\end{figure}
+
+\subsection*{The delayed functions for the friction Reynolds number}
 
 \begin{figure*}[h]
-
 %	\scalebox{0.15}
 	\includegraphics[width=\textwidth]{streaks.pdf}
 	\caption{INSTANTANEOUS VELOCITY SCALAR FIELD IN THE BUFFER LAYER FOR CASE I.}
