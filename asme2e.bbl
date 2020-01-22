@@ -1,16 +1,17 @@
 \begin{thebibliography}{1}
 
 \bibitem{hoyas2008}
-Hoyas, S., and Jimenez, J.
+Hoyas, S., and Jimenez, J., 2008.
 \newblock ``Reynolds number effects on the reynolds stress budgets in turbulent
   channels''.
-\newblock {\em Physics of {F}luid, \textbf{ 20}}.
+\newblock {\em Physics of {F}luid, \textbf{ 20}}, October, p.~101511.
 
 \bibitem{merzari2013}
-Merzari, E., Pointer, W.~D., and Fischer, P.
+Merzari, E., Pointer, W.~D., and Fischer, P., 2013.
 \newblock ``Numerical {S}imulation and {P}roper {O}rthogonal {D}ecomposition in
   a {C}ounter-{F}low {T}-{J}unction''.
-\newblock {\em Journal of Fluids Engineering, \textbf{ 135}}.
+\newblock {\em Journal of Fluids Engineering, \textbf{ 135}}, September,
+  p.~091304.
 
 \bibitem{Obabko2011}
 Obabko, A., Fischer, P., and Tautges, T., 2011.
@@ -28,5 +29,12 @@ Oppenheim, A.~V.
 \newblock Signals and systems.
 \newblock On MIT OpenCourseWare.
 \newblock URL \verb+http://ocw.mit.edu+.
+
+\bibitem{iwamoto2002}
+Iwamoto, K., 2002.
+\newblock {Database of Fully Developed Channel Flow, THTLAB Internal Report}.
+\newblock Progress report ILR-0201, Dept. of Mech. Eng., The Univ. of Tokyo,
+  Bunkyo-ku, Tokyo 113, June.
+\newblock See also URL \verb+http://thtlab.jp/DNS/CH12__PG.WL10+.
 
 \end{thebibliography}

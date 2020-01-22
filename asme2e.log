@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 JAN 2020 18:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 JAN 2020 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,33 +603,36 @@ LaTeX Warning: Reference `fig:geometries' on page 3 undefined on input line 191
 
 [3 <./reynolds.pdf> <./mesh.png>]
 
-LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 238.
+LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 241.
 
 
-LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 238.
+LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 241.
 
 
-LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 238.
+LaTeX Warning: Reference `anl_ret' on page 4 undefined on input line 241.
 
 <convolution_CI.pdf, id=1222, 562.1pt x 421.575pt>
 File: convolution_CI.pdf Graphic file (type pdf)
 <use convolution_CI.pdf>
-Package pdftex.def Info: convolution_CI.pdf  used on input line 243.
+Package pdftex.def Info: convolution_CI.pdf  used on input line 246.
 (pdftex.def)             Requested size: 241.84842pt x 189.06001pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
 []\OT1/phv/b/n/9 FIGURE 6\OT1/ptm/m/n/10 : |THE FRIC-TION REYNOLDS NUM-BER
  []
 
-[4 <./convolution_CI.pdf>]
+
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [4 <./convolution_CI.pdf>]
 
 LaTeX Warning: Reference `fig:ww_profile_CI' on page 5 undefined on input line 
-275.
+277.
 
 <streaks.pdf, id=1244, 3303.34125pt x 1179.40625pt>
 File: streaks.pdf Graphic file (type pdf)
 <use streaks.pdf>
-Package pdftex.def Info: streaks.pdf  used on input line 280.
+Package pdftex.def Info: streaks.pdf  used on input line 282.
 (pdftex.def)             Requested size: 542.025pt x 193.51385pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -637,11 +640,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 (./asme2e.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 7.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 20.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
-[5
+)
+Underfull \hbox (badness 3568) in paragraph at lines 34--39
+[]\OT1/ptm/m/n/10 Iwamoto, K., 2002.  Database of Fully De-vel-oped
+ []
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 34--39
+\OT1/ptm/m/n/10 port ILR-0201, Dept. of Mech. Eng., The Univ. of
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 34--39
+\OT1/ptm/m/n/10 Tokyo, Bunkyo-ku, Tokyo 113, June.  See also URL
+ []
+
+) [5
 
 ] [6
 
@@ -651,10 +668,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13465 strings out of 492616
- 249989 string characters out of 6129482
+ 13466 strings out of 492616
+ 250002 string characters out of 6129482
  436953 words of memory out of 5000000
- 17272 multiletter control sequences out of 15000+600000
+ 17273 multiletter control sequences out of 15000+600000
  569124 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,63p,996b,394s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -671,7 +688,7 @@ s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw
 8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
 texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on asme2e.pdf (6 pages, 3508518 bytes).
+Output written on asme2e.pdf (6 pages, 3512180 bytes).
 PDF statistics:
  1315 PDF objects out of 1440 (max. 8388607)
  700 compressed objects within 7 object streams
