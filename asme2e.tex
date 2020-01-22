@@ -58,28 +58,22 @@ In this study, specific focusS is given to the investigation of turbulence prope
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{nomenclature}
-\entry{A}{You may include nomenclature here.}
-\entry{$\nu$}{Viscosity.}
+\entry{$a$}{Viscosity linear coefficient.}
+\entry{$C$}{Contractioning parameter.}
+\entry{$DNS$}{Direct Numerical Simulation.}
+\entry{${F_{Ci}}$}{Delayed function of Cases ${i}$=I,II and III.}
+\entry{$R$}{Relaxing parameter.}
+\entry{$Re$}{Reynolds number.}
+\entry{$Re_{\tau}$}{Friction Reynolds number.}
+\entry{$u_{\tau}$}{Friction velocity.}
 \entry{$x$}{Streamwise direction.}
 \entry{$y$}{Vertical direction.}
 \entry{$z$}{Spanwise direction.}
-\entry{$Re$}{Reynolds number.}
-\entry{$Re_{\tau}$}{Friction Reynolds number.}
-\entry{$DNS$}{Direct Numerical Simulation.}
-\entry{$ANL$}{Argonne National Laboratory.}
-\entry{${\tau}_w$}{Shear stress at the wall.}
-\entry{$u_{\tau}$}{Friction velocity.}
-\entry{$Re_{\tau}$}{Friction Reynolds number.}
 \entry{$\delta$}{Height of the turbulence channel.}
-\entry{${F_{Ci}}$}{Delayed function of Cases ${i}$=I,II and III.}
-\entry{$a$}{Viscosity linear coefficient.}
-\entry{$R$}{Relaxing parameter.}
-\entry{$C$}{Contractioning parameter.}
 \entry{${\delta}_{i}$}{Streamwise position where Region $i$ starts, ${i}$=I,II and III.}
 \entry{${\Lambda}$}{Signal contribution in the delayed function.}
-\entry{$BLABLABLA$}{Bullshit.}
-
-\entry{$\alpha$}{There are two arguments for each entry of the nomemclature environment, the symbol and the definition.}
+\entry{$\nu$}{Viscosity.}
+\entry{${\tau}_w$}{Shear stress at the wall.}
 \end{nomenclature}
 
 The spacing between abstract and the text heading is two line spaces.  The primary text heading is  boldface in all capitals, flushed left with the left margin.  The spacing between the  text and the heading is also two line spaces.
@@ -216,7 +210,7 @@ F(x)= (20000-{\Lambda})(1-e^{-C(x-{\delta}_{III})})+{\Lambda}
 In this equation \({\delta}_{III}\) is the streamwise position that Region III starts, \(C\) is named contractioning parameter and it stands for the exponential decaying constant to be used in the shifting function \(g(x-\chi)\) when dealing with Region III and finally
  \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{III}-{\delta}_{II})}-1)+\frac{a}{R}({\delta}_{III}-{\delta}_{II})+550\), represents the contribution from Regions II to the delayed signal in Region III.
 
-In summary, Eqn.~\eqref{delayed} express the delayed function for \(Re_{\tau}\) over the different Regions of the turbulence channels in the present work. 
+In summary, Eqn.~\ref{delayed} express the delayed function for \(Re_{\tau}\) over different Regions of the turbulence channels considered in the present work. 
 
 \begin{equation} \label{delayed}
 F(x) = \\
@@ -233,16 +227,17 @@ F(x) = \\
 
 \section*{RESULTS}
 
-Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, the \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are presented. Third, low velocity streaks are presented following it by the s
- \(<u>\) and \(<uu>\) profiles along the streamwise direction for Case I are presented, 
+Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, the \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are presented. Third, low velocity streaks are presented in \(y^+<10\) region from Case I and a discussion about these structures is taken place.
 
 \subsection*{Model verification}
+
+In order to verify the model, results from first region in Case I, where \(Re_{\tau}=550\), were compared to existed data from Ref.~\cite{iwamoto2002}, containing data of a DNS simulation of a turbulence channel with \(Re_{\tau}=650\). Fig.~\ref{fig:comparing_u} shows the \(u^+\) versus \(y^+\) plots for both results, while Fig.~\ref{fig:comparing_uu} shows the \(<uu>\) versus \(y^+\) plots. These graphs shows us that the results from both simulations follows the expected behaviour, this fact grants confidence to the models.
 
 \begin{figure}[t]
 \centering
 \scalebox{0.5}
 {\includegraphics{comparing_u.pdf}}
-\caption{Comparing \(u^+\) from Region I in Case I with already existed data in Ref~\cite{iwamoto2002}.}
+\caption{Comparing \(u^+\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
 \label{fig:comparing_u}
 \end{figure}
 
@@ -250,11 +245,11 @@ Results from the three considered Cases in the present work are shown in this se
 \centering
 \scalebox{0.5}
 {\includegraphics{comparing_uu.pdf}}
-\caption{Comparing \(<uu>\) from Region I in Case I with already existed data in Ref~\cite{iwamoto2002}.}
+\caption{Comparing \(<uu>\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
 \label{fig:comparing_uu}
 \end{figure}
 
-\subsection*{The friction Reynolds number along \(x\)}
+\subsection*{The friction Reynolds number along the streamwis direction}
 
 \begin{figure}[t]
 \centering
