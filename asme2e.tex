@@ -227,17 +227,17 @@ F(x) = \\
 
 \section*{RESULTS}
 
-Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, the \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are presented. Third, low velocity streaks are presented in \(y^+<10\) region from Case I and a discussion about these structures is taken place.
+Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, first and second order statistics results in the close wall region are presented. Third, the \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are present. Lastly, low velocity streaks are presented in \(y^+<10\) region from Case I and a discussion about these structures takes place.
 
 \subsection*{Model verification}
 
-In order to verify the model, results from first region in Case I, where \(Re_{\tau}=550\), were compared to existed data from Ref.~\cite{iwamoto2002}, containing data of a DNS simulation of a turbulence channel with \(Re_{\tau}=650\). Fig.~\ref{fig:comparing_u} shows the \(u^+\) versus \(y^+\) plots for both results, while Fig.~\ref{fig:comparing_uu} shows the \(<uu>\) versus \(y^+\) plots. These graphs shows us that the results from both simulations follows the expected behaviour, this fact grants confidence to the models.
+In order to verify the model, results from first region in Case I, where \(Re_{\tau}=550\), were compared to existed data from Ref.~\cite{iwamoto2002}, DNS results of a turbulence channel with \(Re_{\tau}=650\) is found. Fig.~\ref{fig:comparing_u} shows the \(u^+\) versus \(y^+\) plots for both results, while Fig.~\ref{fig:comparing_uu} shows the \(<uu>\) versus \(y^+\) plots. These graphs shows us that the results from both simulations follows the expected behaviour, this fact grants confidence to the models.
 
 \begin{figure}[t]
 \centering
 \scalebox{0.5}
 {\includegraphics{comparing_u.pdf}}
-\caption{Comparing \(u^+\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
+\caption{Comparing \(u^+\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref.~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
 \label{fig:comparing_u}
 \end{figure}
 
@@ -245,11 +245,36 @@ In order to verify the model, results from first region in Case I, where \(Re_{\
 \centering
 \scalebox{0.5}
 {\includegraphics{comparing_uu.pdf}}
-\caption{Comparing \(<uu>\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
+\caption{Comparing \(<uu>\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref.~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
 \label{fig:comparing_uu}
 \end{figure}
 
-\subsection*{The friction Reynolds number along the streamwis direction}
+\subsection*{First and second order statistics}
+
+Fig.~\ref{fig:u_CI}  shows how \(<u>\) profile develops along the channel in Case I. From this result we can clearly see that the viscous stress at the wall \(\left(\frac{d<U>}{dy}\right)_{y=0}\) gets more pronounced as we move in the streamwise direction. This result makes sense, since in Region II the viscosity starts decreasing linearly, as shown through Fig~\ref{fig:viscosity}, causing the viscous effects to become more pronouced. This fact also explains why the turbulent boundary layer \((y^+=30)\) starts getting closer to the wall in this same range, fact also presented in Fig.~\ref{fig:u_CI}.
+
+Furthermore, after a certain position in \(x\), the boudary layer reaches a constant distance from the wall, this fact also makes sense once in Region III the viscosity becomes constant, then not causing a change in the viscous stress anymore.
+
+Meanwhile, Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development along the streamwise direction also for Case I.
+
+
+\begin{figure}[t]
+\centering
+\scalebox{0.5}
+{\includegraphics{u_CI.pdf}}
+\caption{\(<u>\) profiles along the streamwise direction and the turbulent boudary layer \((y^+=30)\).}
+\label{fig:u_CI}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\scalebox{0.5}
+{\includegraphics{uu_CI.pdf}}
+\caption{\(<uu>\) profiles along the streamwise direction and the turbulent boudary layer (\(y^+=30)\).}
+\label{fig:uu_CI}
+\end{figure}
+
+\subsection*{The delayed friction Reynolds number}
 
 \begin{figure}[t]
 \centering
@@ -292,22 +317,6 @@ In order to verify the model, results from first region in Case I, where \(Re_{\
 \end{figure}
 
 \subsection*{Turbulent structures}
-
-\begin{figure}[t]
-\centering
-\scalebox{0.5}
-{\includegraphics{u_CI.pdf}}
-\caption{\(<u>\) profiles along the streamwise direction and the turbulent boudary layer \((y^+=30)\).}
-\label{fig:u_CI}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-\scalebox{0.5}
-{\includegraphics{uu_CI.pdf}}
-\caption{\(<uu>\) profiles along the streamwise direction and the turbulent boudary layer (\(y^+=30)\).}
-\label{fig:uu_CI}
-\end{figure}
 
 \begin{figure*}[t]
 	\includegraphics[width=\textwidth]{streaks.pdf}
