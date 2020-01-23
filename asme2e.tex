@@ -226,7 +226,7 @@ F(x) = \\
 
 \section*{RESULTS}
 
-Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, first and second order statistics results in the close to the wall region are presented also for Case I in the interest of brevity. Third, the \(Re_{\tau}\) results obtained via numerical models, through Eqn.~\ref{reynolds_approximation} and by the derived delayed function \(F(x)\) are present. Lastly, low velocity streaks are presented in \(y^+<10\) region from Case I and a discussion about these structures takes place.
+Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Second, first and second order statistics results in the close to the wall region are presented also for Case I in the interest of brevity. Third, \(Re_{\tau}\) results and a comparison of the results with the log-law is presented. Lastly, low velocity streaks are given for \(y^+<10\) region from Case I and a discussion about these structures takes place.
 
 \subsection*{Model verification}
 
@@ -254,9 +254,6 @@ The averaging time employed to obtain statistics results for Case I was judged s
 
 Fig.~\ref{fig:u_CI}  shows how \(<u>\) profile develops along the channel in Case I. From this result we can clearly see that the viscous stress at the wall \(\left(\frac{d<U>}{dy}\right)_{y=0}\) gets more pronounced as we move in the streamwise direction. This result makes sense, since in Region II the viscosity starts decreasing linearly, as shown through Fig~\ref{fig:viscosity}, causing the viscous effects to become more pronouced. This fact also explains why the turbulent boundary layer \((y^+=30)\) starts getting closer to the wall in this same range, fact also presented in Fig.~\ref{fig:u_CI}. Moreover, after a certain position in \(x\), the boudary layer reaches a constant height from the wall, this fact also makes sense once in Region III the viscosity becomes constant, not causing a change in the viscous stress anymore.
 
-Meanwhile, Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout the streamwise direction also for Case I. As we move foward in the streamwise direction in this plot, the peak of \(<uu>\) increases and gets closer to the wall. This result is also in good agreement with what is expected, since the turbulence must increase in Region II.
-
-
 \begin{figure}[t]
 \centering
 \scalebox{0.5}
@@ -264,6 +261,8 @@ Meanwhile, Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout t
 \caption{\(<u>\) profiles along the streamwise direction and the turbulent boudary layer \((y^+=30)\).}
 \label{fig:u_CI}
 \end{figure}
+
+Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout the streamwise direction also for Case I. As we move foward in the streamwise direction in this plot, the peak of \(<uu>\) increases and gets closer to the wall. This result is also in good agreement with what is expected, since the turbulence must increase in Region II.
 
 \begin{figure}[t]
 \centering
@@ -273,11 +272,11 @@ Meanwhile, Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout t
 \label{fig:uu_CI}
 \end{figure}
 
-\subsection*{The delayed friction Reynolds number}
+\subsection*{Delayed friction Reynolds number}
 
-Figs.~\ref{fig:convolution_CI}-\ref{fig:convolution_CIII} presents three different friction Reynolds numbers for the cases considered here: first, the values obtained by Eqn.~\ref{reynolds_approximation}, which is an approximation existed in Ref.~\cite{pope} and it is valid for fully developed turbulent flows, second, the numerical result obtained via DNS simulation using Nek5000 and finally, the result from the delayed function presented earlier in Eqn.~\ref{delayed}
+In practice terms, Eqn.~\ref{delayed} delays the signal resulted from the appoximation given by Eqn.~\ref{reynolds_approximation}. This is true once the former expression is the result of a convolution operation over the last one. One might notice that Eqn.~\ref{delayed} dependes on two parameters, i.e., the contractioning parameter \(C\) and the relaxing parameter \(R\), this way, a suitable method for measuring how much delayed is the \(Re_{\tau}\) when varying the viscosity from a fully developed turbulent condition is by adjusting these parameters so that the delayed function \(F(x)\) fits the results obtained from performed simulations.
 
-Unfourtunantly, it was not possible to run Cases II and III the same long, thus the results for this simulations a
+The abovementioned procedure has been performed for the three Cases considered in the present work. Figs.~\ref{fig:convolution_CI}-\ref{fig:convolution_CIII} refers to the friction Reynolds results from Cases I to III respectively. In each one of these plots the parameters \(C\) and \(R\) were calibrated so the delayed function fits in the simulated results. The estimated values for these two parameters are \(C=1.162\) and \(R=0.030\). One should notice that these values kept the same regardless how fast the viscosity changes along \(x\).
 
 \begin{figure}[t]
 \centering
@@ -302,6 +301,8 @@ Unfourtunantly, it was not possible to run Cases II and III the same long, thus 
 \caption{Friction Reynolds number through \(x\) for Case III.}
 \label{fig:convolution_CIII}
 \end{figure}
+
+Unfourtunantly, it was not possible to run Cases II and III the same long as Case I, thus the results for these simulations are not fully resolved. However, it seems that the results of these simulations are approaching to the same values provided by the delay function employed.
 
 \begin{figure}[t]
 \centering
