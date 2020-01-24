@@ -258,7 +258,7 @@ Fig.~\ref{fig:u_CI}  shows how \(<u>\) profile develops along the channel in Cas
 \centering
 \scalebox{0.5}
 {\includegraphics{u_CI.pdf}}
-\caption{\(<u>\) profiles along the streamwise direction and the turbulent boudary layer \((y^+=30)\).}
+\caption{Mean velocity \(<u>\) profiles along the streamwise direction and the turbulent boudary layer \((y^+=30)\).}
 \label{fig:u_CI}
 \end{figure}
 
@@ -268,15 +268,15 @@ Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout the streamwi
 \centering
 \scalebox{0.5}
 {\includegraphics{uu_CI.pdf}}
-\caption{\(<uu>\) profiles along the streamwise direction and the turbulent boudary layer (\(y^+=30)\).}
+\caption{Reynolds stress \(<uu>\) profiles along the streamwise direction and the turbulent boudary layer (\(y^+=30)\).}
 \label{fig:uu_CI}
 \end{figure}
 
 \subsection*{Delayed friction Reynolds number}
 
-In practice terms, Eqn.~\ref{delayed} delays the signal resulted from the appoximation given by Eqn.~\ref{reynolds_approximation}. This is true once the former expression is the result of a convolution operation over the last one. One might notice that Eqn.~\ref{delayed} dependes on two parameters, i.e., the contractioning parameter \(C\) and the relaxing parameter \(R\), this way, a suitable method for measuring how much delayed is the \(Re_{\tau}\) when varying the viscosity from a fully developed turbulent condition is by adjusting these parameters so that the delayed function \(F(x)\) fits the results obtained from performed simulations.
+In practice terms, Eqn.~\ref{delayed} delays the signal resulted from the appoximation given by Eqn.~\ref{reynolds_approximation}. This is true once the former expression is the result of a convolution operation over the last one. One might notice that Eqn.~\ref{delayed} dependes on two parameters, i.e., the contractioning parameter \(C\) and the relaxing parameter \(R\), this way, a suitable method for measuring how much delayed is the \(Re_{\tau}\) when varying the viscosity from a fully developed turbulent condition is by adjusting these parameters so that the delayed function \(F(x)\) well fitted the simulated results.
 
-The abovementioned procedure has been performed for the three Cases considered in the present work. Figs.~\ref{fig:convolution_CI}-\ref{fig:convolution_CIII} refers to the friction Reynolds results from Cases I to III respectively. In each one of these plots the parameters \(C\) and \(R\) were calibrated so the delayed function fits in the simulated results. The estimated values for these two parameters are \(C=1.162\) and \(R=0.030\). One should notice that these values kept the same regardless how fast the viscosity changes along \(x\).
+The abovementioned procedure has been performed for Cases I, II and III considered in the present work. Figs.~\ref{fig:convolution_CI}-\ref{fig:convolution_CIII} refers to the friction Reynolds resulted from these simulations respectively. In each one of these plots the parameters \(C\) and \(R\) were calibrated so the delayed function fits in the simulated results. The estimated values for these two parameters are \(C=1.162\) and \(R=0.030\). One should notice that these values kept the same regardless how fast the viscosity changes along \(x\).
 
 \begin{figure}[t]
 \centering
@@ -302,13 +302,13 @@ The abovementioned procedure has been performed for the three Cases considered i
 \label{fig:convolution_CIII}
 \end{figure}
 
-Unfourtunantly, it was not possible to run Cases II and III the same long as Case I, thus the results for these simulations are not fully resolved. However, it seems that the results of these simulations are approaching to the same values provided by the delay function employed.
+Unfourtunantly, it was not possible to run Cases II and III for the same long as Case I, thus the results for these simulations did not reach statistically stability. However, it seems that the results of these simulations are approaching to the same values provided by the delay function so far employed.
 
-Fig.~\ref{fig:log_law_CI_upstream} and Fig.~\ref{fig:log_law_CI_downstream} shows a comparison between \(u^+\) versus \(y^+\) from Case I and the log-law at different locations along \(x\).
+Fig.~\ref{fig:log_law_CI_upstream} and Fig.~\ref{fig:log_law_CI_downstream} shows a comparison between the mean velocity profile \(u^+\) versus \(y^+\) from Case I and the log-law at different locations along \(x\).
 
-In Fig.~\ref{fig:log_law_CI_upstream} we can see that the \(u^+\) profile is in good agreement with the log-law at \(x=4{\pi}\), however, isofar we move in the downstream direction, the profile stops following the log-law, which is the case of the profiles at \(x=12{\pi}\) and at \(x=20{\pi}\) it gets off even more. The increasing lack of agreement with the log-law means that the turbulence is becoming less developed at these locations throughout Region II. This fact is closely related to what is observed in the graph from Fig.~\ref{fig:convolution_CI} in the sense that as \(Re_{\tau}\) from Case I is more delayed in space when comparison to a fully developed turbulent flow it has less agreement with the log-law. This fact becomes more clear when analysing \(x=20{\pi}\) profile, it is noticed that this is the location where both \(Re_{\tau}\) delay and lack of agreement are maximized.
+In Fig.~\ref{fig:log_law_CI_upstream} we can see that the \(u^+\) profile is in good agreement with the log-law at \(x=4{\pi}\), however, isofar we move in the downstream direction, the profile stops following the log-law, which is the case of the profiles at \(x=12{\pi}\) and at \(x=20{\pi}\), where it gets even more off. The increasing lack of agreement with the log-law means that the flow is becoming less developed at these locations throughout Region II. This fact is closely related to what is observed in the graph from Fig.~\ref{fig:convolution_CI} in the sense that as \(Re_{\tau}\) from Case I is more delayed in space when comparison to a fully developed flow it has less agreement with the log-law. This fact becomes more clear when analysing \(x=20{\pi}\) profile, it is noticed that this is the location where both \(Re_{\tau}\)'s delay and lack of agreement with the log-law are maximized.
 
-Differently, in Fig.~\ref{fig:log_law_CI_downstream} the opposite trend is observed, i.e., as we move in the downstream direction throughout Region III, the \(u^+\) profile becomes more close to the log-law again. This is the expected behaviour since in this Region the viscosity is constant, thus the turbulent flow is not prevented from becoming developed anymore. Once again, this fact is closely related to what is observed in Fig.~\ref{fig:convolution_CI}, once for Region III, \(Re_{\tau}\) from Case I starts getting less delayed in space when compared to a fully developed turbulent flow.
+Differently, in Fig.~\ref{fig:log_law_CI_downstream} the opposite trend is observed, i.e., as we move in the downstream direction throughout Region III, the \(u^+\) profile tends to become more close to the log-law. This is the expected behaviour since in this Region the viscosity is constant, thus the turbulent flow is not prevented from developing anymore. Once again, this fact is closely related to what is observed in Fig.~\ref{fig:convolution_CI}, once for Region III, \(Re_{\tau}\) from Case I starts getting less delayed in space when compared to a fully developed turbulent flow.
 
 \begin{figure}[t]
 \centering
@@ -328,12 +328,9 @@ Differently, in Fig.~\ref{fig:log_law_CI_downstream} the opposite trend is obser
 
 \subsection*{Turbulent structures}
 
-Fig.~\ref{fig:streaks} has been taken from the instantaneous streamwise velocity scalar fiel at a height \(y=0.01\) from the wall. Low-velocities streaks are allowed to be visualized by employing convinient pseudocolor thresholds. Through visual inspection it is possible to measure that the lenght of these structures varies in a range of \(500\) to \(2000\) wall units, which is consistent with the literature Ref.~\cite{carlier2005}. Furthermore, it is possible to notice that the streaks' length somehow does not change along the streamwise direction. However, the distance separating one from the other in the transverse direction, i.e., the spanwise direction, notably increases.
+Fig.~\ref{fig:streaks} has been taken from the instantaneous streamwise velocity scalar field at a height \(y=0.01\) from the wall. Low-velocities streaks are allowed to be visualized by employing convinient pseudocolor thresholds. Through visual verification, it is possible to measure that the lenght of these structures varies in a range of \(500\) to \(2000\) wall units, which is consistent with the literature Ref.~\cite{carlier2005}. Furthermore, it is also noticed that the streaks' length does not change along the streamwise direction. However, the distance separating one from the other in the transverse direction, i.e., the spanwise direction, notably increases.
 
-Two-points correlation in the spanwise direction has been performed correlating the streamwise direction velocities for the present work. This measures has been taken over different positions in the turbulent channel in Case I and Fig.~\ref{fig:spanwise_correlation} shows these results. One may notice that as we move foward in \(x\) the correlation of the measured signals becomes more strong. The increasing correlation in the measure is actually due to what is noticed from the streaks showed in Fig.~\ref{fig:streaks}, i.e., these structures becomes more separated as we move in the downstream portion of the channel.
-The size of the streaks .One should notice from this figure that the number of streaks 
-
- Two-point correlation has been employed in order to 
+Two-points correlation in the spanwise direction has been performed correlating the streamwise direction velocities for the present work. This measures has been taken over different positions in the turbulent channel in Case I, Fig.~\ref{fig:spanwise_correlation} shows these results. One may notice that as we move foward in \(x\) the correlation of the measured signals becomes more strong. The increasing correlation in the measure is actually due to what is noticed from the streaks showed in Fig.~\ref{fig:streaks}, i.e., these structures becomes more separated as we move in the downstream portion of the channel.
 
 \begin{figure*}[t]
 	\includegraphics[width=\textwidth]{streaks.pdf}
