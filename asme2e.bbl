@@ -1,4 +1,30 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{maruyama1976}
+Maruyama, T., Kuribayashi, T., and Mizushina, T., 1976.
+\newblock ``The {S}tructure of the {T}rubulence in {T}ransient {P}ipe
+  {F}lows''.
+\newblock {\em 7ts Symposium on Turbulence, \textbf{ 9}}, December,
+  pp.~431--439.
+
+\bibitem{he2000}
+He, S., and Jackson, J.~D., 2000.
+\newblock ``A study of turbulence under conditions of transient flow in a
+  pipe''.
+\newblock {\em Journal of Fluid Mechanics, \textbf{ 408}}, September, pp.~1 --
+  38.
+
+\bibitem{greenblatt2004}
+Greenblatt, D., and Moss, E.~A., 2004.
+\newblock ``Rapid temporal acceleration of a turbulent pipe flow''.
+\newblock {\em Journal of Fluid Mechanics, \textbf{ 514}}, May, pp.~65 -- 75.
+
+\bibitem{he2015}
+H, S., and Seddighi, M., 2015.
+\newblock ``Transition of transient channel flow after a change in reynolds
+  number''.
+\newblock {\em Journal of Fluid Mechanics, \textbf{ 764}}, February, pp.~395 --
+  427.
 
 \bibitem{hoyas2008}
 Hoyas, S., and Jimenez, J., 2008.
