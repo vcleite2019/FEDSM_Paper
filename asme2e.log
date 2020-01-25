@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 JAN 2020 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 JAN 2020 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,33 +642,33 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 270--271
  [][] 
  []
 
-<convolution_CI.pdf, id=1246, 562.1pt x 421.575pt>
+<convolution_CI.pdf, id=1246, 675.52374pt x 506.89375pt>
 File: convolution_CI.pdf Graphic file (type pdf)
 <use convolution_CI.pdf>
 Package pdftex.def Info: convolution_CI.pdf  used on input line 284.
-(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+(pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 284--285
+Overfull \hbox (12.74284pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
-<convolution_CII.pdf, id=1247, 562.1pt x 421.575pt>
+<convolution_CII.pdf, id=1247, 675.52374pt x 506.89375pt>
 File: convolution_CII.pdf Graphic file (type pdf)
 <use convolution_CII.pdf>
 Package pdftex.def Info: convolution_CII.pdf  used on input line 292.
-(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+(pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 292--293
+Overfull \hbox (12.74284pt too wide) in paragraph at lines 292--293
  [][] 
  []
 
-<convolution_CIII.pdf, id=1248, 562.1pt x 421.575pt>
+<convolution_CIII.pdf, id=1248, 675.52374pt x 506.89375pt>
 File: convolution_CIII.pdf Graphic file (type pdf)
 <use convolution_CIII.pdf>
 Package pdftex.def Info: convolution_CIII.pdf  used on input line 300.
-(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+(pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 300--301
+Overfull \hbox (12.74284pt too wide) in paragraph at lines 300--301
  [][] 
  []
 
@@ -694,12 +694,12 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 324--325
  []
 
 [6 <./convolution_CI.pdf> <./convolution_CII.pdf> <./convolution_CIII.pdf>]
-<streaks.pdf, id=1360, 3303.34125pt x 1216.545pt>
+<streaks.pdf, id=1372, 3303.34125pt x 1216.545pt>
 File: streaks.pdf Graphic file (type pdf)
 <use streaks.pdf>
 Package pdftex.def Info: streaks.pdf  used on input line 336.
 (pdftex.def)             Requested size: 542.025pt x 199.60748pt.
-<spanwise_correlation.pdf, id=1361, 562.1pt x 421.575pt>
+<spanwise_correlation.pdf, id=1373, 562.1pt x 421.575pt>
 File: spanwise_correlation.pdf Graphic file (type pdf)
 <use spanwise_correlation.pdf>
 Package pdftex.def Info: spanwise_correlation.pdf  used on input line 344.
@@ -755,10 +755,10 @@ pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw
 /usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/
 2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on asme2e.pdf (8 pages, 3757514 bytes).
+Output written on asme2e.pdf (8 pages, 3775095 bytes).
 PDF statistics:
- 1487 PDF objects out of 1728 (max. 8388607)
- 832 compressed objects within 9 object streams
+ 1499 PDF objects out of 1728 (max. 8388607)
+ 841 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
