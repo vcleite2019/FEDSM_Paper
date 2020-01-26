@@ -26,8 +26,8 @@
 \author{Victor Coppo Leite
     \affiliation{
 	Ken and Mary Alice Lindquist\\Department of Nuclear Engineering\\
-	Pennsylvania State University\\
-	State College, PA 16801\\
+	The Pennsylvania State University\\
+	University Park, PA 16802\\
     Email: vbc5085@psu.edu
     }	
 }
@@ -37,8 +37,8 @@
 \author{Elia Merzari
     \affiliation{
 	Ken and Mary Alice Lindquist\\Department of Nuclear Engineering\\
-	Pennsylvania State University\\
-	State College, PA 16801\\
+	The Pennsylvania State University\\
+	University Park, PA 16802\\
     Email: ebm5153@psu.edu
     }	
 }
@@ -49,11 +49,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-{\it In various applications in nuclear engineering and in particular in test reactors, heat removal is carried by single-phase axial flow. In these applications, we observe sharp changes in molecular viscosity while the density presents very limited changes. As a consequence, the Reynolds number increases often by 2-3 folds across the channel, with an inlet value often transitional.  In these conditions, turbulence changes significantly across the length of the channel with redistribution and thinning of the boundary layers. This is different from acceleration as the effect of changes in density is negligible. We aim to characterize in detail this phenomenon. 
+{In various applications in nuclear engineering and in particular in test reactors, heat removal is carried by single-phase axial flow. In these applications, we observe sharp changes in molecular viscosity while the density presents very limited changes. As a consequence, the Reynolds number increases often by 2-3 folds across the channel, with an inlet value often transitional.  In these conditions, turbulence changes significantly across the length of the channel with redistribution and thinning of the boundary layers. This is different from acceleration as the effect of changes in density is negligible. We aim to characterize in detail this phenomenon. 
 
-In particular Nek5000, a spectral-element computational fluid dynamics (CFD) code, will be used to perform DNS of fluid flow in the transition regime for channel flow with varying viscosity.  We set up a novel benchmark case: the channel is extended in the stream-wise direction up to 20pi. The viscosity is kept constant in the first 4pi region. This inlet region is used as a cyclic region to obtain a fully developed flow profile at the beginning of the ramping region. The ramping region (4pi -20pi) is defined as a transition region where the viscosity is linearly decreased along the channel. The flow is homogenous in the span-wise direction due to the periodic boundary conditions. Due to the cyclic and wall boundary conditions, the flow is non-homogenous in the stream-wise and wall-normal direction respectively.
+In particular Nek5000, a spectral-element computational fluid dynamics (CFD) code, will be used to perform DNS of fluid flow in the transition regime for channel flow with varying viscosity.  We set up a novel benchmark case: the channel is extended in the stream-wise direction up to 20\(\pi\). The viscosity is kept constant in the first 4\(\pi\) region. This inlet region is used as a cyclic region to obtain a fully developed flow profile at the beginning of the ramping region. The ramping region (4\(\pi\) -20\(\pi\)) is defined as a transition region where the viscosity is linearly decreased along the channel. The flow is homogenous in the span-wise direction due to the periodic boundary conditions. Due to the cyclic and wall boundary conditions, the flow is non-homogenous in the stream-wise and wall-normal direction respectively. In adition to this, two other cases with more inclined ramps were also considered.
 
-In this study, specific focusS is given to the investigation of turbulence properties and structures in the near-wall region along the flow direction. Detailed turbulence budgets are collected and investigated. As expected, the results show that variation in the Reynolds across a channel does not cause an immediate change in the size of turbulent structures in the ramp region and a delay is in fact observed. Moreover, the results from the present study are compared with a correlation available in the literature for the friction velocity and as a function of the Reynolds-number.}
+In this study, specific focus is given to the investigation of turbulence properties and structures in the near-wall region along the flow direction. Detailed turbulence budgets are collected and investigated. As expected, the results show that variation in the Reynolds across a channel does not cause an immediate change in the size of turbulent structures in the ramp region and a delay is in fact observed. Moreover, the results from the present study are compared with a correlation available in the literature for the friction velocity and as a function of the Reynolds-number.}
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,11 +80,11 @@ In this study, specific focusS is given to the investigation of turbulence prope
 \section*{INTRODUCTION}
 
 A schematic of the turbulence channels simulated are shown in Fig.~\ref{fig:geometry_turbchannel}. In this figure, Regions I, II and III are defined by two planes crossing the channel. A cycling region is implemented within Region I, Fig.~\ref{fig:cycling_region}.
-In this problem, the viscosity \(\nu\) is a function of \(x\), i.e., the streamwise distance. This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along Regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
+In this problem, the viscosity \(\nu\) is a function of \(x\), i.e., the streamwise direction. This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along Regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
 
 In the present work, three cases varying the length of Region II are studied. Cases I, II and III have their Region II length of respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity} shows the plot of the viscosity as a function of \(x\) for each one of these cases and Fig.~\ref{fig:reynolds} shows the plot of the Reynolds number for them. In all considered cases the range of the Reynolds number is \(10,000\) - \(20,000\) and it linearly increases with the streamwise direction, but with different ramps. 
 
-Turbulence responses caused by varying other flow's parameters has been already developed, e.g., inertial terms, but not caused by varying the viscosity. Maruya et al.~\cite{maruyama1976} carried out one of the earliest studies on the effect of a step increasing of flow rate in a turbulent flow. Later, He et al.~\cite{he2000} and  Greenblatt \& Moss.~\cite{greenblatt2004} imposed linearly increasing or decreasing excursions of flow rate in a turbulent flow. More recently, He \& Seddighi ~\cite{he2015} performed a much more extensive study on this topic using Direct Numerical Simulation (DNS) through a series of transient flows with systematically varied initial and final Reynolds numbers.
+Turbulence responses caused by varying other parameters of the flow has been already developed, e.g., inertial terms, but not caused by varying the viscosity. Maruya et al.~\cite{maruyama1976} carried out one of the earliest studies on the effect of a step increasing of flow rate in a turbulent flow. Later, He et al.~\cite{he2000} and  Greenblatt \& Moss.~\cite{greenblatt2004} imposed linearly increasing or decreasing excursions of flow rate in a turbulent flow. More recently, He \& Seddighi ~\cite{he2015} performed a much more extensive study on this topic using Direct Numerical Simulation (DNS) through a series of transient flows with systematically varied initial and final Reynolds numbers.
 
 For all three Cases the inleat flow in Region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}. Periodic condition is considered for the boundaries of the spamwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
 
@@ -110,7 +110,7 @@ For all three Cases the inleat flow in Region I is considered to be fully develo
 	\centering
 	\scalebox{0.5}
 	{\includegraphics{viscosity.pdf}}
-	\caption{The viscosity of the considered Cases as a function of \(x\).}
+	\caption{The viscosity of the considered Cases as a function of the streamwise direction.}
 	\label{fig:viscosity}
 	\end{figure}
 
@@ -351,6 +351,9 @@ Two-points correlation in the spanwise direction has been performed correlating 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{CONCLUSIONS}
 
+In the present work, DNS simulation has been perfomerd in order to analyse the effect of varying viscosity in turbulent channel flow. Three cases were considered, in each one of them the viscosity varied along the channel with different ramps, causing the Reynolds number to range linearly from \(10,000\) to \(20,000\) in the ramp region.
+
+The friction Reynolds number was computed from the DNS simulations for each one of the three considered cases. By comparing these results with an an existed approximation valid for fully developed turbulent flows existed in Ref.~\cite{pope} we could notice a delay in the development of the turbulence caused by the varying viscosity. This was expected and makes sense indeed ...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgment}
