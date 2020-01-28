@@ -29,7 +29,7 @@
 	Pennsylvania State University\\
 	University Park, PA 16802\\
     Email: vbc5085@psu.edu
-    }	
+    }
 }
 
 %%% second author
@@ -40,20 +40,20 @@
 	Pennsylvania State University\\
 	University Park, PA 16802\\
     Email: ebm5153@psu.edu
-    }	
+    }
 }
 
 \begin{document}
 
-\maketitle    
+\maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-{In various applications in nuclear engineering and in particular in test reactors, heat removal is carried by single-phase axial flow. In these applications, we observe sharp changes in molecular viscosity while the density presents very limited changes. As a consequence, the Reynolds number increases often by 2-3 folds across the channel, with an inlet value often transitional.  In these conditions, turbulence changes significantly across the length of the channel with redistribution and thinning of the boundary layers. This is different from acceleration as the effect of changes in density is negligible. We aim to characterize in detail this phenomenon. 
+{In this article we examine channel flow subject to spatially varying viscosity in the streamwise direction. The Reynolds number is imposed locally with three different ramps. The setup is reminiscent of transient channel flow, but with a space-dependent viscosity rather than a time dependent viscosity. It is also relevant to various applications in nuclear engineering and in particular in test reactors, where the viscosity changes significantly in the streamwise direction, and there is a severe lack of Direct Numerical Simulation (DNS) data to benchmark turbulence models in these conditions.
 
-In particular Nek5000, a spectral-element computational fluid dynamics (CFD) code, will be used to perform DNS of fluid flow in the transition regime for channel flow with varying viscosity.  We set up a novel benchmark case: the channel is extended in the stream-wise direction up to 20\(\pi\). The viscosity is kept constant in the first 4\(\pi\) region. This inlet region is used as a cyclic region to obtain a fully developed flow profile at the beginning of the ramping region. The ramping region (4\(\pi\) -20\(\pi\)) is defined as a transition region where the viscosity is linearly decreased along the channel. The flow is homogenous in the span-wise direction due to the periodic boundary conditions. Due to the cyclic and wall boundary conditions, the flow is non-homogenous in the stream-wise and wall-normal direction respectively. In adition to this, two other cases with more inclined ramps were also considered.
+As part of this work we set up a novel benchmark case: the channel is extended in the stream-wise direction up to 20\(\pi\). The viscosity is kept constant in the first 4\(\pi\) region. This inlet region is used as a cyclic region to obtain a fully developed flow profile at the beginning of the ramping region. In the ramping region the Reynolds number is linearly increased along the channel. The flow is homogenous in the span-wise direction, while the flow is non-homogenous in the stream-wise and wall-normal direction respectively. In preparation for Direct Numerical Simulation (DNS), we perform here wall-resolved Large Eddy Simulations (LES) with Nek5000, a spectral-element computational fluid dynamics (CFD) code developed at Argonne National Laboratory.
 
-In this study, specific focus is given to the investigation of turbulence properties and structures in the near-wall region along the flow direction. Detailed turbulence budgets are collected and investigated. As expected, the results show that variation in the Reynolds across a channel does not cause an immediate change in the size of turbulent structures in the ramp region and a delay is in fact observed. Moreover, the results from the present study are compared with a correlation available in the literature for the friction velocity and as a function of the Reynolds-number.}
+In this study, specific focus is given to the investigation of turbulence properties and structures in the near-wall region along the flow direction. Turbulent statistics are collected and investigated. Similarly to transient channel flow, the results show that variation in the Reynolds across a channel does not cause an immediate change in the size of turbulent structures in the ramp region and a delay is in fact observed in both wall shear and. The results from the present study are compared with a correlation available in the literature for the friction velocity and as a function of the Reynolds-number.}
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,15 +78,15 @@ In this study, specific focus is given to the investigation of turbulence proper
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{INTRODUCTION}
+In various applications in nuclear engineering and in particular in test reactors, heat removal is carried by single-phase axial flow. In these applications, we observe sharp changes in molecular viscosity while the density presents very limited changes.  For example in a sodium reactor the viscosity drops by 30\% across the core \cite{finkthermodynamic} while the density drop by less than 5\%.  For test reactors operating with water at atmospheric pressure the drop in viscosity across the core can exceed 100\% while the density changes by only 2 \% (e.g., the values are computed assuming an average temperature increase across the core of 40 K).As a consequence, the Reynolds number increases often two-folds across the channel, with an inlet value often transitional.  In these conditions, turbulence changes significantly across the length of the channel with redistribution and thinning of the boundary layers.
 
-A schematic of the turbulence channels simulated are shown in Fig.~\ref{fig:geometry_turbchannel}. In this figure, Regions I, II and III are defined by two planes crossing the channel. A cycling region is implemented within Region I, Fig.~\ref{fig:cycling_region}.
-In this problem, the viscosity \(\nu\) is a function of \(x\), i.e., the streamwise direction. This parameter has constants values of \(1E-4\) Pa.s and \(5E-5\) Pa.s along Regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\).
+While there have been numerous studies that investigate the interaction of temperature boundary layers with velocity boundary layers and changes in properties, the focus is often on the effect of buoyancy, which is not a primary concern for the cases under investigation.There is a relative derth of data and in particular DNS data on the effect of changing viscosity over a spatially developing boundary layer. The present study is a step toward filling this  gap. The data generated will be used to benchmark Reynolds Averaged Navier Stokes turbulence models used for the design and safety evaluation of advanced reactors and test reactors.
 
-In the present work, three cases varying the length of Region II are studied. Cases I, II and III have their Region II length of respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity} shows the plot of the viscosity as a function of \(x\) for each one of these cases and Fig.~\ref{fig:reynolds} shows the plot of the Reynolds number for them. In all considered cases the range of the Reynolds number is \(10,000\) - \(20,000\) and it linearly increases with the streamwise direction, but with different ramps. 
+While the ultimate objective is to simulate the effect on channel flow of a spatially developing temperature boundary layer, we start with an imposed  space-dependent viscosity (and consequently Reynolds number). This has the benefit of reducing complexity and separating the effect of changing viscosity from the complexity of a spatially developing temperature boundary layer. We note the similarity of this approach to transient channel flow, in which the Reynolds number of a double-periodic channel flow simulation is changed in time.  Maruya et al.~\cite{maruyama1976} carried out one of the earliest studies on the effect of a step increasing of flow rate in a turbulent flow. Later, He et al.~\cite{he2000} and  Greenblatt \& Moss.~\cite{greenblatt2004} imposed linearly increasing or decreasing excursions of flow rate in a turbulent flow. More recently, He \& Seddighi ~\cite{he2015} performed a much more extensive study on this topic using Direct Numerical Simulation (DNS) through a series of transient flows with systematically varied initial and final Reynolds numbers. Interestingly, He \& Seddighi ~\cite{he2015}  described transient channel flow as a bypass transition. In the course of the manuscript we will not similarities between the case of interest and transient channel flow. We note however that a direct mapping through the Taylor hypothesis is not possible, in fact a spatial change of viscosity cannot be directly related to a time-dependent channel flow in which the conditions of the entire channel are changed at once.
 
-Turbulence responses caused by varying other parameters of the flow has been already developed, e.g., inertial terms, but not caused by varying the viscosity. Maruya et al.~\cite{maruyama1976} carried out one of the earliest studies on the effect of a step increasing of flow rate in a turbulent flow. Later, He et al.~\cite{he2000} and  Greenblatt \& Moss.~\cite{greenblatt2004} imposed linearly increasing or decreasing excursions of flow rate in a turbulent flow. More recently, He \& Seddighi ~\cite{he2015} performed a much more extensive study on this topic using Direct Numerical Simulation (DNS) through a series of transient flows with systematically varied initial and final Reynolds numbers.
+As part of this work we set up a novel benchmark case: the channel is extended in the stream-wise direction up to 20\(\pi\). The viscosity is kept constant in the first 4\(\pi\) region. This inlet region is used as a cyclic region to obtain a fully developed flow profile at the beginning of the ramping region. In the ramping region the Reynolds number is linearly increased along the channel. The flow is homogenous in the span-wise direction, while the flow is non-homogenous in the stream-wise and wall-normal direction respectively.  A schematic of the turbulence channels simulated are shown in Figure~\ref{fig:geometry_turbchannel}. In this figure, Regions I, II and III are defined by two planes crossing the channel. A cycling region is implemented within Region I, Fig.~\ref{fig:cycling_region}. In this problem, the viscosity \(\nu\) is a function of \(x\), i.e., the streamwise direction. This parameter has constants values along Regions I and III respectively, while in region II it decreases with respect to the inverse of \(x\). In the present work, three cases varying the length of Region II are studied. Cases I, II and III have their Region II length of respectively \(16\pi\), \(8\pi\) and \(4\pi\). Fig.~\ref{fig:viscosity} shows the plot of the viscosity as a function of \(x\) for each one of these cases and Fig.~\ref{fig:reynolds} shows the plot of the Reynolds number for them. In all considered cases the range of the Reynolds number is \(10,000\) - \(20,000\) and it linearly increases with the streamwise direction, but with different ramps. For all three Cases the inleat flow in Region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}. Periodic condition is considered for the boundaries of the spanwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
 
-For all three Cases the inleat flow in Region I is considered to be fully developed with \(Re_{\tau}=550\), i.e., the same conditions as in \cite{hoyas2008}. Periodic condition is considered for the boundaries of the spamwise direction, i.e., \(z\) axis, and finally wall conditions are considered for the boudaries of the vertical direction, i.e., \(y\) axis.
+For the three cases under consideration Direct Numerical Simulation is performed with Nek5000, a spectral-element computational fluid dynamics (CFD) code developed at Argonne National Laboratory. The simulations will be used to develop a full DNS dataset. In the methods section we introduce Nek5000 and convolution analysis. In the results section we compare simulation results with available data. We focus in particular on spatially developing $Re_{\tau}$ as a function of $x$ and the difference observed with predictions based on correlations obtained for fully developed channel flow. Finally we examine coherent structures and in particular how streaks develop in the streamwise direction. We observe strong similarities with what observed for transient channel flow for the spanwise correlation of the streaks. The results call into question the application of standard turbulence models, and wall functions, to cases with strongly varying viscosity, which should be evaluated for benchmarks like the one provided within this manuscript.
 
 \begin{figure}[t]
 	\centering
@@ -125,24 +125,26 @@ For all three Cases the inleat flow in Region I is considered to be fully develo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{METHODS - DIRECT NUMERICAL SIMULATION}
 
-In order to resolve the finest turbulent scales, the calculations of this work has been developed through Direct Numerical Simulation (DNS). To do so Nek5000 was employed, a spectral element code developed in Argonne National Laboratory (ANL). Nek5000 has been validated in references \cite{merzari2013} and \cite{Obabko2011}.
+In order to resolve the finest turbulent scales, the calculations of this work has been developed through Direct Numerical Simulation (DNS).
+DNS simulations are able to simulate the finest turbulent length scales without using any turbulent model. Since the present work is focused on studying the contribution of the smaller scales to the energy cascade, it is required to use DNS rather than Reynolds Averaged Navier-Stokes (RANS) or Large Eddy Simulations (LES), although there is a substantial growth of the computational cost.
 
-The solution of this method is given by trigonometric series, in each element a polynomial functions of up to the twelveth degree have been employed to discretize the velocity field. Fig.~\ref{fig:mesh} shows an example of the grid from half of the channel's cross section. One should notice that the discretization presented by this particular area is identical through all model's domain and it is only presented half of the cross-section for better visualization of the frame.
+Nek5000 is employed, a spectral element code developed in Argonne National Laboratory (ANL).  In Nek5000 \cite{fischer2015nek5000} \cite{fischer1997} the domain is discretized in curvilinear hexahedral  or quadrilateral elements, conforming to the domain boundaries. Functions within each element are expanded using Lagrangian polynomials built on Gauss Lobatto Legendre collation points and operators are cast in tensor-product form. The pressure can be solved at the same polynomial order of the velocity $N$ ($P_{N}-P_{N}$ formulation) or at lower order $N-2$ ($P_{N}-P_{N-2}$ formulation). Two time-stepping schemes, both up to third order, are available: BDF and OIFS \cite{fischer2003implementation}. The latter has the advantage of less severe stability limitation allowing for $CFL>1$, but is characterized by a larger cost per time step. We note that the temporal discretization is typically based on a high-order splitting that is third-order accurate in time.
+Nek5000 features a stress-formulation solver capable of solving the three velocity components at once: this is essential for cases with non-aligned symmetry boundary conditions, variable viscosity cases and RANS.
+
+The pressure substep requires a Poisson solver at each step, which is performed through multigrid-preconditioned GMRES iteration coupled with temporal projection to find an optimal initial guess. Particularly important components of Nek5000 are its scalable coarse-grid solvers that are central to parallel performance. For both weak scaling and strong scaling using Algebraic Multi Grid (AMG) for the coarse-grid solve is essential above 250,000 elements. Nek5000 employs a pure MPI parallel implementation. Nek5000 has received estensive validated in numerous references, we cite here \cite{merzari2013} and \cite{Obabko2011}.
+
+Lagrangian polynomials of up to the 15th degree have been employed to discretize the velocity field in this case. The total mesh count exceed 100,000 hexahedral elements distributed homogeneously in the streamwise direction. Figure~\ref{fig:mesh} shows an example of the grid from half of the channel's cross section. One should notice that the discretization presented by this particular area is identical through all model's domain and it is only presented half of the cross-section for better visualization of the frame. The discretization has been developed  to match accepted standards for the DNS of channel flow. This includes: $y^{+}<1$ near wall, 10 points below $y^{+}<10$, $\Delta x^{+}<4$ and $\Delta z^{+}<8$.
 
 \begin{figure}[t]
 	\centering
 	\scalebox{0.16}
 	{\includegraphics{mesh.png}}
-	\caption{The grid employed in the simulation from half of the channel's cross section.}
+	\caption{The grid employed in the simulation from half of the channel's cross section. 11th order.}
 	\label{fig:mesh}
 \end{figure}
 
-DNS simulations are able to simulate the finest turbulent length scales without using any turbulent model. Since the present work is focused on studying the contribution of the smaller scales to the energy cascade, it is required to use DNS rather than Reynolds 
-ge Navier-Stokes (RANS) or Large Eddy Simulations (LES), although there is a substantial growth of the computational cost.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{METHODS - CONVOLUTION ANALYSIS OF THE FRICTION REYNOLDS NUMBER}
-
 
 The friction Reynolds number has been calculated via numerical simulations for Cases I, II and III and this result was compared to the values obtained using an existed expression from Ref.~\cite{pope} valid for fully developed turbulent flows. A delay in space can be seen between \(Re_{\tau}\) when comparing the simulations' results with the values yielded from the mentioned expression. This way, these results are treated as signals in the space and a convolution operation is performed over the analytical expression for fully developed turbulent flows in order to built a function that should matches with the obtained values from the simulations.
 
@@ -183,9 +185,7 @@ F(x) =  \int_{-\infty}^{+\infty} Re_{\tau}(\chi)g(x-\chi)d\chi
 \label{convolution}
 \end{equation}
 
-As mentioned earlier, the simulated channels in the present study are divided in three Regions, as shown in Fig.~\ref{fig:geometry_turbchannel}, thus, a different delayed function should be employed for each one of those. Since there is no delay in Region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\). Differently, in Region II and III the results from the numerical experiments are delayed when compared to those from Eqn.~\ref{reynolds_approximation} and because of that a convolution operator takes place. Since we are dealing with a delayed signal in both Regions, a decaying exponential has been used as a shifting function, as proposed in Ref.~\cite{signals}.
-
-In Region II, the friction Reynolds number is a linear function given by Eqn.~\ref{region2_reynolds}.
+As mentioned earlier, the simulated channels in the present study are divided in three Regions, as shown in Fig.~\ref{fig:geometry_turbchannel}, thus, a different delayed function should be employed for each one of those. Since there is no delay in Region I, no special treatment is required for it, thus \(F(x)=Re_{\tau}(x)=550\). Differently, in Region II and III the results from the numerical experiments are delayed when compared to those from Eqn.~\ref{reynolds_approximation} and because of that a convolution operator takes place. Since we are dealing with a delayed signal in both Regions, a decaying exponential has been used as a shifting function, as proposed in Ref.~\cite{signals}. In Region II, the friction Reynolds number is a linear function given by Eqn.~\ref{region2_reynolds}.
 
 \begin{equation}
 Re_{\tau}(x)=ax+550
@@ -211,7 +211,7 @@ F(x)= (20000-{\Lambda})(1-e^{-C(x-{\delta}_{III})})+{\Lambda}
 In this equation \({\delta}_{III}\) is the streamwise position that Region III starts, \(C\) is named contractioning parameter and it stands for the exponential decaying constant to be used in the shifting function \(g(x-\chi)\) when dealing with Region III and finally
  \({\Lambda}=\frac{a}{R^2}(e^{-R({\delta}_{III}-{\delta}_{II})}-1)+\frac{a}{R}({\delta}_{III}-{\delta}_{II})+550\), represents the contribution from Regions II to the delayed signal in Region III.
 
-In summary, Eqn.~\ref{delayed} express the delayed function for \(Re_{\tau}\) over different Regions of the turbulence channels considered in the present work. 
+In summary, Eqn.~\ref{delayed} express the delayed function for \(Re_{\tau}\) over different Regions of the turbulence channels considered in the present work.
 
 \begin{equation} \label{delayed}
 F(x) = \\
@@ -222,17 +222,25 @@ F(x) = \\
 \end{array}\right.
 \end{equation}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{RESULTS}
 
-Results from the three considered Cases in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Then, first and second order statistics results in the close to the wall region are presented also just for Case I in the interest of brevity. Third, \(Re_{\tau}\) results and a comparison of the results with the log-law is presented. Lastly, low velocity streaks are given for \(y^+<10\) region from Case I and a discussion about these structures takes place.
+Results for the three cases considered in the present work are shown in this section. First, a comparison between the results in Region I from Case I with an existed data from Ref~\cite{iwamoto2002} is done in order to verify the model. Then, first and second order statistics results in the close to the wall region are presented also just for Case I in the interest of brevity. Third, \(Re_{\tau}\) results and a comparison of the results with the log-law is presented. Lastly, low velocity streaks are given for \(y^+<10\) region from Case I and a discussion about these structures takes place.
+
+\subsection*{Flow visualization}
+
+Figure~\ref{fig:flow_viz} provides a flow visualization of the streamwise velocity as the flow evolves downstream. The units are normalized by the half-width.
+
+\begin{figure*}[t]
+    \includegraphics[width=\textwidth]{flow_field_x_y_with_label.pdf}
+    \caption{Flow visualization of the streamwive velocity in the y-x plane.}
+    \label{fig:flow_viz}
+\end{figure*}
 
 \subsection*{Model verification}
 
-In order to verify the model, results from first region in Case I, where \(Re_{\tau}=550\), were compared to existed data from Ref.~\cite{iwamoto2002}, in which DNS results of a turbulent channel with \(Re_{\tau}=650\) is found. Fig.~\ref{fig:comparing_u} shows the mean velocity \(u^+\) versus \(y^+\) plots for both results, while Fig.~\ref{fig:comparing_uu} shows the Reynolds stress \(<uu>\) versus \(y^+\) plots. These graphs shows that the results from both simulations follows the expected behaviour, this fact grants confidence to the models used in the present work.
+In order to verify the model, results from first region in Case I, where \(Re_{\tau}=550\), were compared to existed data from Ref.~\cite{iwamoto2002}, in which DNS results of a turbulent channel with \(Re_{\tau}=650\) is found. Fig.~\ref{fig:comparing_u} shows the mean velocity \(u^+\) versus \(y^+\) plots for both results, while Fig.~\ref{fig:comparing_uu} shows the Reynolds stress \(<uu>\) versus \(y^+\) plots. These graphs shows that the results from both simulations follows the expected behaviour, this fact grants confidence to the models used in the present work. Future work will include comparisons of high order statistics including skewness, kurtosis and flatness as well as turbulence budgets.
 
 \begin{figure}[t]
 \centering
@@ -245,7 +253,7 @@ In order to verify the model, results from first region in Case I, where \(Re_{\
 \begin{figure}[t]
 \centering
 \scalebox{0.5}
-{\includegraphics{comparing_uu.pdf}}
+{\includegraphics{comparing_uu_400_650.pdf}}
 \caption{Comparing \(<uu>\) from Region I in Case I, where \(Re_{\tau}=550\), with already existed data from Ref.~\cite{iwamoto2002}, where \(Re_{\tau}=650\).}
 \label{fig:comparing_uu}
 \end{figure}
@@ -254,7 +262,7 @@ In order to verify the model, results from first region in Case I, where \(Re_{\
 
 The averaging time employed to obtain statistics results for Case I was judged sufficient since it allowed the solution to reach near perfect symmetry. Furthermore, to reduce this time spatial average has been taken over the spanwise direction, since the flow is homogeneous in this direction.
 
-Fig.~\ref{fig:u_CI}  shows how \(<u>\) profile develops along the channel in Case I. From this result we can clearly see that the viscous stress at the wall \(\left(\frac{d<U>}{dy}\right)_{y=0}\) gets more pronounced as we move in the streamwise direction. This result makes sense, since in Region II the viscosity starts decreasing linearly, as shown through Fig.~\ref{fig:viscosity}, causing the viscous effects to become more pronouced. This fact also explains why the turbulent boundary layer \((y^+=30)\) starts getting closer to the wall in this same range, fact also presented in Fig.~\ref{fig:u_CI}. Moreover, after a certain value of \(x\), the boudary layer reaches a constant height from the wall, this fact also makes sense once in Region III the viscosity becomes constant, not causing a change in the viscous stress anymore.
+Fig.~\ref{fig:u_CI}  shows how \(<u>\) profile develops along the channel in Case I. From this result we can clearly see that the viscous stress at the wall \(\left(\frac{d<U>}{dy}\right)_{y=0}\) gets more pronounced as we move in the streamwise direction. This result is consistent with expectations since in Region II the viscosity starts decreasing linearly, as shown through Fig.~\ref{fig:viscosity}, causing the viscous effects to become more pronounced. This fact also explains why the turbulent boundary layer \((y^+=30)\) starts getting closer to the wall in this same range, fact also presented in Fig.~\ref{fig:u_CI}. Moreover, after a certain value of \(x\), the boundary layer reaches a constant height from the wall, this fact also makes sense once in Region III the viscosity becomes constant, not causing a change in the viscous stress anymore.
 
 \begin{figure}[t]
 \centering
@@ -264,7 +272,7 @@ Fig.~\ref{fig:u_CI}  shows how \(<u>\) profile develops along the channel in Cas
 \label{fig:u_CI}
 \end{figure}
 
-Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout the streamwise direction also for Case I. As we move foward in the streamwise direction in this plot, the peak of \(<uu>\) increases and gets closer to the wall. This result is also in good agreement with what is expected, since the turbulence must increase in Region II.
+Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout the streamwise direction also for Case I. As we move forward in the streamwise direction in this plot, the peak of \(<uu>\) increases and gets closer to the wall. This result is also consistent with epxectations.
 
 \begin{figure}[t]
 \centering
@@ -276,9 +284,9 @@ Fig.~\ref{fig:uu_CI} shows \(<uu>\) profile development throughtout the streamwi
 
 \subsection*{Delayed friction Reynolds number}
 
-In practice terms, Eqn.~\ref{delayed} delays the signal resulted from the appoximation given by Eqn.~\ref{reynolds_approximation}. This is true once the former expression is the result of a convolution operation over the last one. One might notice that Eqn.~\ref{delayed} dependes on two parameters, i.e., the contractioning parameter \(C\) and the relaxing parameter \(R\), this way, a suitable method for measuring how much delayed is the \(Re_{\tau}\) when varying the viscosity from a fully developed turbulent condition is by adjusting these parameters so that the delayed function \(F(x)\) well fitted the simulated results.
+In practice terms, Eqn.~\ref{delayed} delays the signal resulted from the appoximation given by Eqn.~\ref{reynolds_approximation}. This is true once the former expression is the result of a convolution operation. One might notice that Eqn.~\ref{delayed} depends on two parameters, i.e., the contractiong parameter \(C\) and the relaxing parameter \(R\), this way, a suitable method for measuring how much delayed is the \(Re_{\tau}\) when varying the viscosity from a fully developed turbulent condition is by adjusting these parameters so that the delayed function \(F(x)\) well fitted the simulated results.
 
-The abovementioned procedure has been performed for Cases I, II and III considered in the present work. Figs.~\ref{fig:convolution_CI}-\ref{fig:convolution_CIII} refers to the friction Reynolds resulted from these simulations respectively. In each one of these plots the parameters \(C\) and \(R\) were calibrated so the delayed function fits in the simulated results. The estimated values for these two parameters are \(C=1.162\) and \(R=0.030\). One should notice that these values kept the same regardless how fast the viscosity changes along \(x\).
+The above mentioned procedure has been performed for Cases I, II and III considered in the present work. Figs.~\ref{fig:convolution_CI}-\ref{fig:convolution_CIII} refers to the friction Reynolds resulted from these simulations respectively. In each one of these plots the parameters \(C\) and \(R\) were calibrated so the delayed function fits in the simulated results. The estimated values for these two parameters are \(C=1.162\) and \(R=0.030\). One should notice that these values kept the same regardless how fast the viscosity changes along \(x\). We note that the value may depend on the ratio of the ramp which has not been varied in time.
 
 \begin{figure}[t]
 \centering
@@ -304,13 +312,13 @@ The abovementioned procedure has been performed for Cases I, II and III consider
 \label{fig:convolution_CIII}
 \end{figure}
 
-Unfourtunantly, it was not possible to run Cases II and III for the same long as Case I, thus the results for these simulations did not reach statistically stability. However, it seems that the results of these simulations are approaching to the same values provided by the delay function so far employed.
+Unfortunately, it was not possible to run Cases II and III for the same long as Case I, thus the results for these simulations did not reach statistically stability. However, it seems that the results of these simulations are approaching to the same values provided by the delay function so far employed.
 
 Fig.~\ref{fig:log_law_CI_upstream} and Fig.~\ref{fig:log_law_CI_downstream} shows a comparison between the mean velocity profile \(u^+\) versus \(y^+\) from Case I and the log-law at different locations along \(x\).
 
-In Fig.~\ref{fig:log_law_CI_upstream} we can see that the \(u^+\) profile is in good agreement with the log-law at \(x=4{\pi}\), however, isofar we move in the downstream direction, the profile stops following the log-law, which is the case of the profiles at \(x=12{\pi}\) and at \(x=20{\pi}\), where it gets even more off. The increasing lack of agreement with the log-law means that the flow is becoming less developed at these locations throughout Region II. This fact is closely related to what is observed in the graph from Fig.~\ref{fig:convolution_CI} in the sense that as \(Re_{\tau}\) from Case I is more delayed in space when comparison to a fully developed flow it has less agreement with the log-law. This fact becomes more clear when analysing \(x=20{\pi}\) profile, it is noticed that this is the location where both \(Re_{\tau}\)'s delay and lack of agreement with the log-law are maximized.
+In Fig.~\ref{fig:log_law_CI_upstream} we can see that the \(u^+\) profile is in good agreement with the log-law at \(x=4{\pi}\), however, insofar we move in the downstream direction, the profile stops following the log-law, which is the case of the profiles at \(x=12{\pi}\) and at \(x=20{\pi}\), where it shows an even stronger departure from the log-law. The increasing lack of agreement is consistent with observations in transient channel flow. This fact is closely related to what is observed in the graph from Fig.~\ref{fig:convolution_CI}. This fact becomes more clear when analyzing the profile at \(x=20{\pi}\). We observe  that this is the location where both \(Re_{\tau}\) delay compared to fully devleoped channel flow the and lack of agreement with the log-law are maximized.
 
-Differently, in Fig.~\ref{fig:log_law_CI_downstream} the opposite trend is observed, i.e., as we move in the downstream direction throughout Region III, the \(u^+\) profile tends to become more close to the log-law. This is the expected behaviour since in this Region the viscosity is constant, thus the turbulent flow is not prevented from developing anymore. Once again, this fact is closely related to what is observed in Fig.~\ref{fig:convolution_CI}, once for Region III, \(Re_{\tau}\) from Case I starts getting less delayed in space when compared to a fully developed turbulent flow.
+In Figure~\ref{fig:log_law_CI_downstream} the opposite trend is observed, i.e., as we move in the downstream direction throughout Region III, the \(u^+\) profile tends to become more close to the log-law. This is the expected behaviour since in this Region the viscosity is constant, thus the turbulent flow is now allowed to develop spatially. Once again, this fact is closely related to what is observed in Fig.~\ref{fig:convolution_CI} for Region III where  \(Re_{\tau}\) starts approaching the value expected for fully developed turbulent flow.
 
 \begin{figure}[t]
 \centering
@@ -330,9 +338,10 @@ Differently, in Fig.~\ref{fig:log_law_CI_downstream} the opposite trend is obser
 
 \subsection*{Turbulent structures}
 
-Fig.~\ref{fig:streaks} has been taken from the instantaneous streamwise velocity scalar field at a height \(y=0.01\) from the wall. Low-velocities streaks are allowed to be visualized by employing convinient pseudocolor thresholds. Through visual verification, it is possible to measure that the lenght of these structures varies in a range of \(500\) to \(2000\) wall units, which is consistent with the literature Ref.~\cite{carlier2005}. Furthermore, it is also noticed that the streaks' length does not change along the streamwise direction. However, the distance separating one from the other in the transverse direction, i.e., the spanwise direction, notably increases.
+Fig.~\ref{fig:streaks} depicts the  instantaneous streamwise velocity scalar field at a height \(y=0.01\) from the wall. Low-velocities streaks are observed. Through visual verification, it is possible to measure that the lenght of these structures varies in a range of \(500\) to \(2000\) wall units, which is consistent with the literature Ref.~\cite{carlier2005}. Furthermore, it is also noticed that the streaks' length does not change along the streamwise direction. This was confirmed through streamwise two-point correlations at multiple locations. In the future we will also apply advanced streak length measurement techniques.
 
-Two-points correlation in the spanwise direction has been performed correlating the streamwise direction velocities for the present work. This measures has been taken over different positions in the turbulent channel in Case I, Fig.~\ref{fig:spanwise_correlation} shows these results. One may notice that as we move foward in \(x\) the correlation of the measured signals becomes more strong. The increasing correlation in the measure is actually due to what is noticed from the streaks showed in Fig.~\ref{fig:streaks}, i.e., these structures becomes more separated as we move in the downstream portion of the channel.
+Two-points correlation in the spanwise direction has been performed correlating the streamwise direction velocities for the present work. This measures has been taken over different positions in the turbulent channel in Case I, Fig.~\ref{fig:spanwise_correlation} shows these results. One may notice that as we move foward in \(x\) the correlation of the measured signals becomes more strong until it reaches a peak in negative value. The peak negative value can be used a mean to evaluate correlation and separation of the streaks.  The increasing correlation is consistent with what seen  in Figre~\ref{fig:streaks}, i.e., these structures becomes more separated as we move in the downstream portion of the channel.
+The results indicate that streaks are destroyed and destabilized as the flow advances  in the streamwise direction. The scenario is remarkably similar to what presented by He \& Seddighi ~\cite{he2015} in transient channel flow at high to moderate Reynolds ratios. We note that the behavior may change with different Reynolds ratios as it will be investigated in the future.
 
 \begin{figure*}[t]
 	\includegraphics[width=\textwidth]{streaks.pdf}
@@ -351,25 +360,20 @@ Two-points correlation in the spanwise direction has been performed correlating 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{CONCLUSIONS}
 
-In the present work, DNS simulation has been perfomerd in order to analyse the effect of varying viscosity in turbulent channel flow. Three cases were considered, in each one of them the viscosity varied along the channel with different ramps, causing the Reynolds number to range linearly from \(10,000\) to \(20,000\) in the ramp region.
+In the present work, DNS simulation has been performed in order to analyze the effect of varying viscosity in turbulent channel flow. Three cases were considered, in each one of them the viscosity varied along the channel with different ramps, causing the Reynolds number to range linearly from \(10,000\) to \(20,000\) in the ramp region. The benchmark is relevant to nuclear applications with steep changes in viscosity.
 
-The friction Reynolds number was computed for each one of the three considered cases. By comparing these results with an an existed approximation valid for fully developed turbulent flows existed in Ref.~\cite{pope} we noticed a delay in the development of the turbulence caused by varying the viscosity. This was expected and actually makes sense. The viscosity affects the viscous stress at the wall boundaries, thus, varying this parameter could not cause an immediate change in the flow above this region immediatly.
+The friction Reynolds number was computed for each one of the three considered cases. By comparing these results with an an existed approximation valid for fully developed turbulent flows existed in Ref.~\cite{pope} we noticed a delay in the development of the wall shear. This was consistent with expectations. While, the viscosity affects the viscous stress at the wall boundaries, turbulence dynamics does not repsonde instantaneously This same feature was also observed by several authors for transient channel flow ~\cite{maruyama1976,he2000,greenblatt2004,he2015}. Another interesting finding is that the measured delay in the \(Re_{\tau}\) does not depend on the inclination of the Reynolds number ramp. This behavior is is also consistent with transient channel flow.
 
-We could understand this as a new turbulence taking place against an old one, i.e., a new turbulence gets started on the wall region and propagates to the core of the flow. This same feature was also noticed in Refs.~\cite{maruyama1976,he2000,greenblatt2004,he2015} when the flow rate varies. Another interesting finding is that the measured delay in the \(Re_{\tau}\) does not depend on the inclination of the Reynolds number ramp. This behaviour is also similar to the findings in the mentioned references.
+Furthermore, from both visual inspection and two-point correlation it was noticed that the distance between the streaks in the spanwise direction appeared in the near-wall region to increase until it reaches a peak. This is consistent with trends observed by other authors for transient channel flow for an appropriate range of Reynolds ratios. We note that while we explored different ramps we did investigate different Reynolds ratios.
 
-Furthermore, from both visual inspection and two-point correlation it was noticed that the distance between the streaks in the spanwise direction appeared to increase in the near-wall region, while they kept the same lenght. This is different from what is observed in an excursion due to the flow rate. In this last case what is actually observed is that the streaks simply disapear, since the mean streamwise velocity of the flow increases, causing the production of kinetic energy to become different from zero.
+Overall we observed strong similarities between the flow presented here and transient channel flow. This opens the potential to use the rich theory developed for the class fo flows to this geometry. This possibility will be explored in the future. We note that these results call into question the application of standard turbulence models, and wall functions, to cases with strongly varying viscosity, which should be evaluated for benchmarks like the one provided within this manuscript.
 
-Further investigation to better describe and understand the behaviour of the low-speed streaks in the near wall region is then required. For future work, we propose using image processing techniques to analyse structures in this region. To achieve this goal we may reffer to image procedures allowing quantitative characterization of structures in turbulent flows, as proposed in Ref.~\cite{lin2008}, allied to machine learning techniques.
+Further investigation will also be dedicated to better describe and understand the behavior of the low-speed streaks in the near wall region is then required. For future work, we propose using image processing techniques to analyze structures in this region. To achieve this goal we may refer to image procedures allowing quantitative characterization of structures in turbulent flows, as proposed in Ref.~\cite{lin2008}, allied to machine learning techniques. We will also compare budget terms for the Reynolds stress tensor with the objective of providing a stronger benchmark basis for RANS models. Finally, we will  perform coupled temperature-velocity calculations with variable properties to assess the effect of temperature transport over the behavior of turbulence.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{acknowledgment}
-Thanks go to D. E. Knuth and L. Lamport for developing the wonderful word processing software packages \TeX\ and \LaTeX. I also would like to thank Ken Sprott, Kirk van Katwyk, and Matt Campbell for fixing bugs in the ASME style file \verb+asme2e.cls+, and Geoff Shiflett for creating 
-ASME bibliography stype file \verb+asmems4.bst+.
-\end{acknowledgment}
-
 \bibliographystyle{asmems4}
 
 \bibliography{asme2e}
-\appendix   
+\appendix
 
 \end{document}
