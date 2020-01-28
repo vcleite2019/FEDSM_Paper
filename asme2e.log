@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  26 JAN 2020 17:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  28 JAN 2020 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,16 +534,13 @@ Underfull \hbox (badness 10000) detected at line 48
 
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
-
-Underfull \vbox (badness 2538) has occurred while \output is active []
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 84.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 82.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
  [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -590,173 +587,180 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
-
-Underfull \vbox (badness 2103) has occurred while \output is active []
-
-<mesh.png, id=18, 1566.85374pt x 1031.855pt>
+[2] [3 <./geometry_turbchannel.pdf> <./axis.pdf> <./cycling_region.pdf> <./visc
+osity.pdf> <./reynolds.pdf>]
+<mesh.png, id=1218, 1566.85374pt x 1031.855pt>
 File: mesh.png Graphic file (type png)
 <use mesh.png>
-Package pdftex.def Info: mesh.png  used on input line 135.
+Package pdftex.def Info: mesh.png  used on input line 141.
 (pdftex.def)             Requested size: 1566.84993pt x 1031.85248pt.
- [2 <./geometry_turbchannel.pdf> <./axis.pdf> <./cycling_region.pdf> <./viscosi
-ty.pdf>]
-[3 <./reynolds.pdf> <./mesh.png>]
-<comparing_u.pdf, id=1222, 562.1pt x 421.575pt>
+ [4 <./mesh.png>]
+<flow_field_x_y_with_label.pdf, id=1225, 3471.97125pt x 1536.74126pt>
+File: flow_field_x_y_with_label.pdf Graphic file (type pdf)
+<use flow_field_x_y_with_label.pdf>
+Package pdftex.def Info: flow_field_x_y_with_label.pdf  used on input line 236.
+
+(pdftex.def)             Requested size: 542.025pt x 239.90419pt.
+<comparing_u.pdf, id=1226, 562.1pt x 421.575pt>
 File: comparing_u.pdf Graphic file (type pdf)
 <use comparing_u.pdf>
-Package pdftex.def Info: comparing_u.pdf  used on input line 240.
-(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
-
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 240--241
- [][] 
- []
-
-<comparing_uu.pdf, id=1223, 562.1pt x 421.575pt>
-File: comparing_uu.pdf Graphic file (type pdf)
-<use comparing_uu.pdf>
-Package pdftex.def Info: comparing_uu.pdf  used on input line 248.
+Package pdftex.def Info: comparing_u.pdf  used on input line 248.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
 Overfull \hbox (23.58745pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
-[4 <./comparing_u.pdf>]
-<u_CI.pdf, id=1244, 562.1pt x 421.575pt>
+<comparing_uu_400_650.pdf, id=1227, 562.1pt x 421.575pt>
+File: comparing_uu_400_650.pdf Graphic file (type pdf)
+<use comparing_uu_400_650.pdf>
+Package pdftex.def Info: comparing_uu_400_650.pdf  used on input line 256.
+(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 256--257
+ [][] 
+ []
+
+<u_CI.pdf, id=1228, 562.1pt x 421.575pt>
 File: u_CI.pdf Graphic file (type pdf)
 <use u_CI.pdf>
-Package pdftex.def Info: u_CI.pdf  used on input line 262.
+Package pdftex.def Info: u_CI.pdf  used on input line 270.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 262--263
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 270--271
  [][] 
  []
 
-<uu_CI.pdf, id=1245, 562.1pt x 421.575pt>
+<uu_CI.pdf, id=1229, 562.1pt x 421.575pt>
 File: uu_CI.pdf Graphic file (type pdf)
 <use uu_CI.pdf>
-Package pdftex.def Info: uu_CI.pdf  used on input line 272.
+Package pdftex.def Info: uu_CI.pdf  used on input line 280.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 272--273
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
-<convolution_CI.pdf, id=1246, 675.52374pt x 506.89375pt>
+[5]
+<convolution_CI.pdf, id=1233, 675.52374pt x 506.89375pt>
 File: convolution_CI.pdf Graphic file (type pdf)
 <use convolution_CI.pdf>
-Package pdftex.def Info: convolution_CI.pdf  used on input line 286.
-(pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
-
-Overfull \hbox (12.74284pt too wide) in paragraph at lines 286--287
- [][] 
- []
-
-<convolution_CII.pdf, id=1247, 675.52374pt x 506.89375pt>
-File: convolution_CII.pdf Graphic file (type pdf)
-<use convolution_CII.pdf>
-Package pdftex.def Info: convolution_CII.pdf  used on input line 294.
+Package pdftex.def Info: convolution_CI.pdf  used on input line 294.
 (pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
 
 Overfull \hbox (12.74284pt too wide) in paragraph at lines 294--295
  [][] 
  []
 
-<convolution_CIII.pdf, id=1248, 675.52374pt x 506.89375pt>
-File: convolution_CIII.pdf Graphic file (type pdf)
-<use convolution_CIII.pdf>
-Package pdftex.def Info: convolution_CIII.pdf  used on input line 302.
+<convolution_CII.pdf, id=1234, 675.52374pt x 506.89375pt>
+File: convolution_CII.pdf Graphic file (type pdf)
+<use convolution_CII.pdf>
+Package pdftex.def Info: convolution_CII.pdf  used on input line 302.
 (pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
 
 Overfull \hbox (12.74284pt too wide) in paragraph at lines 302--303
  [][] 
  []
 
-[5 <./comparing_uu.pdf> <./u_CI.pdf> <./uu_CI.pdf>]
-<log_law_CI_upstream.pdf, id=1303, 562.1pt x 421.575pt>
-File: log_law_CI_upstream.pdf Graphic file (type pdf)
-<use log_law_CI_upstream.pdf>
-Package pdftex.def Info: log_law_CI_upstream.pdf  used on input line 318.
-(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+<convolution_CIII.pdf, id=1235, 675.52374pt x 506.89375pt>
+File: convolution_CIII.pdf Graphic file (type pdf)
+<use convolution_CIII.pdf>
+Package pdftex.def Info: convolution_CIII.pdf  used on input line 310.
+(pdftex.def)             Requested size: 675.5221pt x 506.89252pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 318--319
+Overfull \hbox (12.74284pt too wide) in paragraph at lines 310--311
  [][] 
  []
 
-<log_law_CI_downstream.pdf, id=1304, 562.1pt x 421.575pt>
-File: log_law_CI_downstream.pdf Graphic file (type pdf)
-<use log_law_CI_downstream.pdf>
-Package pdftex.def Info: log_law_CI_downstream.pdf  used on input line 326.
+[6 <./flow_field_x_y_with_label.pdf> <./comparing_u.pdf> <./comparing_uu_400_65
+0.pdf>]
+<log_law_CI_upstream.pdf, id=1299, 562.1pt x 421.575pt>
+File: log_law_CI_upstream.pdf Graphic file (type pdf)
+<use log_law_CI_upstream.pdf>
+Package pdftex.def Info: log_law_CI_upstream.pdf  used on input line 326.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
 Overfull \hbox (23.58745pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
-[6 <./convolution_CI.pdf> <./convolution_CII.pdf> <./convolution_CIII.pdf>]
-<streaks.pdf, id=1372, 3303.34125pt x 1216.545pt>
-File: streaks.pdf Graphic file (type pdf)
-<use streaks.pdf>
-Package pdftex.def Info: streaks.pdf  used on input line 338.
-(pdftex.def)             Requested size: 542.025pt x 199.60748pt.
-<spanwise_correlation.pdf, id=1373, 562.1pt x 421.575pt>
-File: spanwise_correlation.pdf Graphic file (type pdf)
-<use spanwise_correlation.pdf>
-Package pdftex.def Info: spanwise_correlation.pdf  used on input line 346.
+<log_law_CI_downstream.pdf, id=1300, 562.1pt x 421.575pt>
+File: log_law_CI_downstream.pdf Graphic file (type pdf)
+<use log_law_CI_downstream.pdf>
+Package pdftex.def Info: log_law_CI_downstream.pdf  used on input line 334.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 346--347
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 334--335
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 366.
+[7 <./u_CI.pdf> <./uu_CI.pdf> <./convolution_CI.pdf> <./convolution_CII.pdf>]
+<streaks.pdf, id=1382, 3303.34125pt x 1216.545pt>
+File: streaks.pdf Graphic file (type pdf)
+<use streaks.pdf>
+Package pdftex.def Info: streaks.pdf  used on input line 347.
+(pdftex.def)             Requested size: 542.025pt x 199.60748pt.
+<spanwise_correlation.pdf, id=1383, 562.1pt x 421.575pt>
+File: spanwise_correlation.pdf Graphic file (type pdf)
+<use spanwise_correlation.pdf>
+Package pdftex.def Info: spanwise_correlation.pdf  used on input line 355.
+(pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
+
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 355--356
+ [][] 
+ []
+
+[8 <./convolution_CIII.pdf> <./log_law_CI_upstream.pdf> <./log_law_CI_downstrea
+m.pdf>] (./asme2e.bbl
+Underfull \vbox (badness 4686) has occurred while \output is active []
+
+ [9 <./streaks.pdf> <./spanwise_correlation.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 13.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 71.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [7 <./log_law_CI_upstream.pdf> <./log_law_CI_downstream.pdf>] (./asme2e.bbl
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 7.
-
-Underfull \hbox (badness 2469) in paragraph at lines 60--65
+)
+Underfull \hbox (badness 2469) in paragraph at lines 85--90
 []\OT1/ptm/m/n/10 Iwamoto, K., 2002.  Database of Fully De-vel-oped
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 60--65
+Underfull \hbox (badness 2173) in paragraph at lines 85--90
 \OT1/ptm/m/n/10 port ILR-0201, Dept. of Mech. Eng., The Univ. of
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./streaks.pdf> <./spanwise_correlation.pdf>]) [9
-
-] (./asme2e.aux) ) 
+) [10]
+(./asme2e.aux) ) 
 Here is how much of TeX's memory you used:
- 13518 strings out of 492616
- 251317 string characters out of 6129482
- 436953 words of memory out of 5000000
- 17317 multiletter control sequences out of 15000+600000
+ 13528 strings out of 492616
+ 251638 string characters out of 6129482
+ 439953 words of memory out of 5000000
+ 17326 multiletter control sequences out of 15000+600000
  568017 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,63p,946b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
-b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on asme2e.pdf (9 pages, 3777076 bytes).
+ 41i,10n,63p,1973b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on asme2e.pdf (10 pages, 5257061 bytes).
 PDF statistics:
- 1502 PDF objects out of 1728 (max. 8388607)
- 843 compressed objects within 9 object streams
+ 1532 PDF objects out of 1728 (max. 8388607)
+ 863 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

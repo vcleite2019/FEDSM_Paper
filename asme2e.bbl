@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{finkthermodynamic}
+Fink, J., and Leibowitz, L.
+\newblock Thermodynamic and transport properties of sodium liquid and vapor
+  (argonne natioal laboratory, 1995).
+\newblock Tech. rep., ANL/RE-95/2.
+
 \bibitem{maruyama1976}
 Maruyama, T., Kuribayashi, T., and Mizushina, T., 1976.
 \newblock ``The {S}tructure of the {T}rubulence in {T}ransient {P}ipe
@@ -31,6 +37,25 @@ Hoyas, S., and Jimenez, J., 2008.
 \newblock ``Reynolds number effects on the reynolds stress budgets in turbulent
   channels''.
 \newblock {\em Physics of {F}luid, \textbf{ 20}}, October, p.~101511.
+
+\bibitem{fischer2015nek5000}
+Fischer, P., Lottes, J., Kerkemeier, S., Marin, O., Heisey, K., Obabko, A.,
+  Merzari, E., and Peet, Y., 2015.
+\newblock ``Nek5000: Users manual''.
+\newblock In {\em Technical Report}. Technical Report ANL/MCS-TM-351, Argonne
+  National Laboratory.
+
+\bibitem{fischer1997}
+Fischer, P.~F., 1997.
+\newblock ``An overlapping schwarz method for spectral element solution of the
+  incompressible navier--stokes equations''.
+\newblock {\em Journal of Computational Physics, \textbf{ 133}}(1),
+  pp.~84--101.
+
+\bibitem{fischer2003implementation}
+Fischer, P., 2003.
+\newblock Implementation considerations for the oifs/characteristics approach
+  to convection problems.
 
 \bibitem{merzari2013}
 Merzari, E., Pointer, W.~D., and Fischer, P., 2013.
@@ -71,8 +96,9 @@ Carlier, J., and Stanislas, M., 2004.
   pp.~143--188.
 
 \bibitem{lin2008}
-Lin, J., Laval, J.~P., Foucaut, J.~M., and Sanislas, M.
+Lin, J., Laval, J.~P., Foucaut, J.~M., and Sanislas, M., 2008.
 \newblock ``Quantitative characterization of coherent structures in the buffer
   layer of near-wall turbulence. part 1: streaks''.
+\newblock {\em Experiments in Fluids, \textbf{ 45}}, June, pp.~999 -- 1013.
 
 \end{thebibliography}
