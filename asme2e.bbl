@@ -81,12 +81,11 @@ Oppenheim, A.~V.
 \newblock On MIT OpenCourseWare.
 \newblock URL \verb+http://ocw.mit.edu+.
 
-\bibitem{iwamoto2002}
-Iwamoto, K., 2002.
-\newblock {Database of Fully Developed Channel Flow, THTLAB Internal Report}.
-\newblock Progress report ILR-0201, Dept. of Mech. Eng., The Univ. of Tokyo,
-  Bunkyo-ku, Tokyo 113, June.
-\newblock See also URL \verb+http://thtlab.jp/DNS/CH12__PG.WL10+.
+\bibitem{myoungkyu2015}
+Lee, M., and Moser, R.~D., 2015.
+\newblock ``Direct numerical simulation of turbulent channel flow up to
+  \({R}e_{\tau}=5200\)''.
+\newblock {\em Journal of Fluids Mechanics, \textbf{ 268}}, May, pp.~395--415.
 
 \bibitem{carlier2005}
 Carlier, J., and Stanislas, M., 2004.
