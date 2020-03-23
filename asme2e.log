@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 MAR 2020 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 MAR 2020 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,8 +641,9 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
-[5]
-<convolution_CI.pdf, id=1233, 675.52374pt x 505.89pt>
+[5] [6 <./flow_field_x_y_with_label.pdf> <./comparing_u_543.pdf> <./comparing_u
+u_543.pdf>]
+<convolution_CI.pdf, id=1274, 675.52374pt x 505.89pt>
 File: convolution_CI.pdf Graphic file (type pdf)
 <use convolution_CI.pdf>
 Package pdftex.def Info: convolution_CI.pdf  used on input line 303.
@@ -652,8 +653,6 @@ Overfull \hbox (26.25616pt too wide) in paragraph at lines 303--304
  [][] 
  []
 
-[6 <./flow_field_x_y_with_label.pdf> <./comparing_u_543.pdf> <./comparing_uu_54
-3.pdf>]
 <convolution_CII.pdf, id=1275, 562.1pt x 421.575pt>
 File: convolution_CII.pdf Graphic file (type pdf)
 <use convolution_CII.pdf>
@@ -678,63 +677,63 @@ Overfull \hbox (23.58745pt too wide) in paragraph at lines 319--320
 <log_law_CI_upstream.pdf, id=1344, 562.1pt x 421.575pt>
 File: log_law_CI_upstream.pdf Graphic file (type pdf)
 <use log_law_CI_upstream.pdf>
-Package pdftex.def Info: log_law_CI_upstream.pdf  used on input line 335.
+Package pdftex.def Info: log_law_CI_upstream.pdf  used on input line 333.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 335--336
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 333--334
  [][] 
  []
 
 <log_law_CI_downstream.pdf, id=1345, 562.1pt x 421.575pt>
 File: log_law_CI_downstream.pdf Graphic file (type pdf)
 <use log_law_CI_downstream.pdf>
-Package pdftex.def Info: log_law_CI_downstream.pdf  used on input line 343.
+Package pdftex.def Info: log_law_CI_downstream.pdf  used on input line 341.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 343--344
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 341--342
  [][] 
  []
 
 <streaks.pdf, id=1346, 3303.34125pt x 1216.545pt>
 File: streaks.pdf Graphic file (type pdf)
 <use streaks.pdf>
-Package pdftex.def Info: streaks.pdf  used on input line 351.
+Package pdftex.def Info: streaks.pdf  used on input line 349.
 (pdftex.def)             Requested size: 542.025pt x 199.60748pt.
+
+Underfull \vbox (badness 7099) has occurred while \output is active []
+
 <spanwise_correlation.pdf, id=1347, 562.1pt x 421.575pt>
 File: spanwise_correlation.pdf Graphic file (type pdf)
 <use spanwise_correlation.pdf>
-Package pdftex.def Info: spanwise_correlation.pdf  used on input line 359.
+Package pdftex.def Info: spanwise_correlation.pdf  used on input line 357.
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 359--360
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 357--358
  [][] 
  []
 
 <time_spanwise_correlation.pdf, id=1348, 562.1pt x 421.575pt>
 File: time_spanwise_correlation.pdf Graphic file (type pdf)
 <use time_spanwise_correlation.pdf>
-Package pdftex.def Info: time_spanwise_correlation.pdf  used on input line 367.
+Package pdftex.def Info: time_spanwise_correlation.pdf  used on input line 365.
 
 (pdftex.def)             Requested size: 562.09863pt x 421.57396pt.
 
-Overfull \hbox (23.58745pt too wide) in paragraph at lines 367--368
+Overfull \hbox (23.58745pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
 [8 <./convolution_CIII.pdf> <./log_law_CI_upstream.pdf> <./log_law_CI_downstrea
-m.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <./streaks.pdf> <./spanwise_correlation.pdf> <./time_spanwise_correlation.p
-df>]
-(./asme2e.bbl
+m.pdf>] [9 <./streaks.pdf> <./spanwise_correlation.pdf> <./time_spanwise_correl
+ation.pdf>] (./asme2e.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 13.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 71.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
-[10] (./asme2e.aux) ) 
+)) [10]
+(./asme2e.aux) ) 
 Here is how much of TeX's memory you used:
  13534 strings out of 492616
  251853 string characters out of 6129482
@@ -743,20 +742,20 @@ Here is how much of TeX's memory you used:
  568017 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,63p,1547b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8
-r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
-.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-d
-ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on asme2e.pdf (10 pages, 5268410 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on asme2e.pdf (10 pages, 5296014 bytes).
 PDF statistics:
  1499 PDF objects out of 1728 (max. 8388607)
  832 compressed objects within 9 object streams
