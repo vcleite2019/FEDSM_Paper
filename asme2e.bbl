@@ -61,8 +61,7 @@ Fischer, P., 2003.
 Merzari, E., Pointer, W.~D., and Fischer, P., 2013.
 \newblock ``Numerical {S}imulation and {P}roper {O}rthogonal {D}ecomposition in
   a {C}ounter-{F}low {T}-{J}unction''.
-\newblock {\em Journal of Fluids Engineering, \textbf{ 135}}, September,
-  p.~091304.
+\newblock {\em Journal of Fluids Engineering, \textbf{ 135}}, May, p.~091304.
 
 \bibitem{Obabko2011}
 Obabko, A., Fischer, P., and Tautges, T., 2011.
@@ -93,6 +92,14 @@ Carlier, J., and Stanislas, M., 2004.
   using particle image velocimetry''.
 \newblock {\em Journal of Fluids Mechanics, \textbf{ 535}}, November,
   pp.~143--188.
+
+\bibitem{Tomboulidesa2018}
+Tomboulides, A., Aithal, S., Fischer, P., Merzari, E., Obabko, A., and Shaver,
+  D., 2018.
+\newblock ``A novel numerical treatment of the near-wall regions in the
+  \(k-\omega\) class of {RANS} models''.
+\newblock {\em International Journal of Heat and Fluid Flow, \textbf{ 72}},
+  September, pp.~186--199.
 
 \bibitem{lin2008}
 Lin, J., Laval, J.~P., Foucaut, J.~M., and Sanislas, M., 2008.
