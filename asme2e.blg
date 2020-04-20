@@ -5,45 +5,45 @@ The style file: asmems4.bst
 Database file #1: asme2e.bib
 Warning--empty year in finkthermodynamic
 Warning--empty year in signals
-You've used 17 entries,
+You've used 18 entries,
             1984 wiz_defined-function locations,
-            595 strings with 6250 characters,
-and the built_in function-call counts, 4711 in all, are:
-= -- 449
-> -- 152
+            602 strings with 6407 characters,
+and the built_in function-call counts, 5039 in all, are:
+= -- 481
+> -- 162
 < -- 1
-+ -- 62
-- -- 45
-* -- 301
-:= -- 640
-add.period$ -- 53
-call.type$ -- 17
-change.case$ -- 17
++ -- 66
+- -- 48
+* -- 324
+:= -- 683
+add.period$ -- 56
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 236
-empty$ -- 465
-format.name$ -- 45
-if$ -- 1135
+cite$ -- 20
+duplicate$ -- 252
+empty$ -- 495
+format.name$ -- 48
+if$ -- 1216
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 14
-newline$ -- 89
-num.names$ -- 17
-pop$ -- 64
+int.to.str$ -- 18
+missing$ -- 15
+newline$ -- 94
+num.names$ -- 18
+pop$ -- 66
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 175
+skip$ -- 189
 stack$ -- 0
-substring$ -- 317
-swap$ -- 124
+substring$ -- 345
+swap$ -- 134
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 45
-width$ -- 19
-write$ -- 189
+while$ -- 48
+width$ -- 20
+write$ -- 200
 (There were 2 warnings)
